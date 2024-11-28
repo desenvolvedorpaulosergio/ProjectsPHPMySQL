@@ -1,0 +1,113 @@
+@charset 'UTF-8';
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding-top: 10px;
+    display: flex;
+    width: 100dvw;
+    height: auto;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+#config-container{
+    box-shadow: 5px 5px 5px #00000038;
+    border-radius: 10px;
+    overflow-y: auto;
+    height: 50dvh;
+    width: 90dvw;
+}
+
+caption{
+    text-shadow: 2px 2px 1px #00000059;
+    font: normal bold 35px georgia;
+    background: #00e400c2;
+    color: white;
+    padding: 10px;
+}
+
+table{
+    border-collapse: collapse;
+    margin: auto;
+    width: 100%;
+    table-layout: fixed;
+}
+
+th, td{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th{
+    font: normal normal 20px georgia;
+    background: #00e40071;
+    color: #1b1b1b;
+    padding: 5px;
+    border-left: 1px solid #0000001a;
+    border-right: 1px solid #0000001a;
+}
+
+th:nth-child(1), th:nth-child(3), th:nth-child(4), th:nth-child(7), th:nth-child(8){
+    width: 8%;
+}
+
+.estilo_registros{
+    font: normal normal 15px arial;
+    text-align: center;
+    color: black;
+    padding: 5px;
+}
+
+.estilo_registros:nth-child(even){
+    background: rgba(0, 255, 0, 0.151);
+}
+
+tr:hover{
+    background: #00000015;
+}
+
+#estilo-container2{
+    text-align: center;
+    padding: 10px;
+}
+
+.estilo-botao{
+    font: normal normal 15px arial;
+    padding: 5px 10px;
+    width: 100px;
+}
+
+.estilo-input{
+    font: normal normal 15px arial;
+    padding: 8px 10px;
+    min-width: 350px;
+    color: gray;
+}
+
+label{
+    font: normal normal 18px arial;
+}
+
+#estilo-container{
+    width: 90%;
+    padding: 10px;
+    height: 250px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: #f5deb38a;
+    box-shadow: 3px 3px 5px #00000052;
+}
+
+#config-lista{
+    list-style: '✔' inside none;
+    columns: 3;
+    color: green;
+    text-align: center;
+}
