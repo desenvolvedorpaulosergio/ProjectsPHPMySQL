@@ -6,10 +6,10 @@
     <title>Projeto Formulário (1) - PHP</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite" />
     <link rel="stylesheet" href="../classcss/index.css">
-    <script src="../classjs/index.css"></script>
+    <script src="../classjs/index.js"></script>
 </head>
 <body>
-    <div class="estilo-container" id="config-especifico">
+    <div class="estilo-container" id="config-especifico-div">
         <div class="estilo-padrao" id="estilo-especifico1">
             <span>
                 <h1 id="estilo-titulo">CADASTRE-SE</h1> <br>
@@ -21,32 +21,11 @@
     </div>
 
     <div class="estilo-container">
-        <div class="estilo-padrao" id="estilo-especifico2"></div>
         <div class="estilo-padrao estilo-form" id="estilo-especifico1">
             <form action="../classphp/index.php" method="post" autocomplete="on" id="config-form">
-                <div id="form1">
-                    <label for="nome">
-                        <input type="text" minlength="10" maxlength="30" required placeholder="nome completo...">
-                    </label>
-                    <label for="idade">
-                        <input type="number" name="idade" id="" placeholder="idade" min="15" max="115" step="1">
-                    </label> <br>
-                    <label for="genero">
-                        <span id="estilo-genero">
-                            sexo:
-                            <span>m <input type="radio" name="sexo" id="genero" value="m"></span>
-                            <span>f <input type="radio" name="sexo" id="genero" value="f"></span>
-                            <span>outro <input type="radio" name="sexo" id="genero" value="outro"></span>
-                        </span>
-                    </label>
-                    <textarea name="endereco" class="estilo-padrao-textarea" placeholder="endereço"></textarea>
-                </div>  
+                <div></div>
+                <div></div>
             </form>
-            <span>
-                <button class="estilo-botao2" id="config-botao1"></button>
-                <button class="estilo-botao2" id="config-botao2"></button>
-                <button class="estilo-botao2" id="config-botao3"></button>
-            </span>
         </div>
     </div>
 
