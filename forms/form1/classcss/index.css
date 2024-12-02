@@ -10,11 +10,11 @@ body{
     width: 100dvw;
     display: flex;
     align-items: center;
-    flex-flow: row nowrap;
     justify-content: center;
+    flex-flow: column nowrap;
 }
 
-#estilo-container{
+.estilo-container{
     height: 450px;
     width: 900px;
     background: white;
@@ -71,4 +71,8 @@ body{
 
 .estilo-botoes:active{
     transform: scale(0.95);
+}
+
+#config-especifico{
+    display: none;
 }
