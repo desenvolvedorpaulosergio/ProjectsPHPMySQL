@@ -23,8 +23,24 @@
     <div class="estilo-container">
         <div class="estilo-padrao" id="estilo-especifico2"></div>
         <div class="estilo-padrao" id="estilo-especifico1">
-            <form action="../classphp/index.php" method="post">
-                io
+            <form action="../classphp/index.php" method="post" autocomplete="on" id="config-form">
+                <div id="form1">
+                    <label for="nome">
+                        <input type="text" minlength="10" maxlength="30" required placeholder="nome completo...">
+                    </label>
+                    <label for="idade">
+                        <input type="number" name="idade" id="" placeholder="idade" min="15" max="115" step="1">
+                    </label> <br>
+                    <label for="genero">
+                        <span id="estilo-genero">
+                            sexo:
+                            <span>m <input type="radio" name="sexo" id="genero" value="m"></span>
+                            <span>f <input type="radio" name="sexo" id="genero" value="f"></span>
+                            <span>outro <input type="radio" name="sexo" id="genero" value="outro"></span>
+                        </span>
+                    </label>
+                    <textarea name="endereco" class="estilo-padrao-textarea" placeholder="endereço"></textarea>
+                </div>                
             </form>
         </div>
     </div>

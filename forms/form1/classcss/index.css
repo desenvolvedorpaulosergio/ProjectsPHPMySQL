@@ -76,3 +76,41 @@ body{
 #config-especifico{
     display: none;
 }
+
+input[type=text], input[type=number]{
+    font: normal normal 20px 'arial';
+    border: 0.5px solid black;
+    border-radius: 5px;
+    color: #575757;
+    margin: 5px 2px;
+    padding: 8px;
+    width: 100%;
+}
+
+#estilo-genero{
+    font: normal normal 20px 'arial';
+    justify-content: space-between;
+    align-items: center;
+    color: #575757;
+    margin: 10px 0px;
+    display: flex;
+}
+
+#form1{
+    width: 80%;
+}
+
+input[type=radio]{
+    padding: 10px;
+}
+
+#config-form{
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.estilo-padrao-textarea{
+    padding: 10px;
+}
