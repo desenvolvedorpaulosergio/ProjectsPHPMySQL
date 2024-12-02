@@ -35,7 +35,7 @@ body{
 #estilo-especifico1{
     text-align: center;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 }
@@ -82,7 +82,7 @@ input[type=text], input[type=number]{
     border: 0.5px solid black;
     border-radius: 5px;
     color: #575757;
-    margin: 5px 2px;
+    margin: 10px 2px;
     padding: 8px;
     width: 100%;
 }
@@ -92,7 +92,7 @@ input[type=text], input[type=number]{
     justify-content: space-between;
     align-items: center;
     color: #575757;
-    margin: 10px 0px;
+    margin: 15px 0px;
     display: flex;
 }
 
@@ -107,10 +107,28 @@ input[type=radio]{
 #config-form{
     display: flex;
     align-items: center;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: center;
 }
 
 .estilo-padrao-textarea{
     padding: 10px;
+    width: 100%;
+    height: 100px;
+}
+
+.estilo-botao2{
+    padding: 5px;
+    border-radius: 100%;
+    border: 3px solid #d7e6fb;
+    background: transparent;
+}
+
+#config-botao1{
+    background: #32c5fa;
+}
+
+.estilo-form{
+    display: flex;
+    flex-flow: column wrap;
 }
