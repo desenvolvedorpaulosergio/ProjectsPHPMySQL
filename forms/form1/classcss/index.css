@@ -147,3 +147,35 @@ input[type=text], input[type=number], input[type=email], input[type=tel]{
 #config-display-form{
     display: none;
 }
+
+#estilo-modal{
+    background: white;
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    height: 100dvh;
+    width: 100dvw;
+    left: 0;
+    top: 0;
+}
+
+@keyframes rotacao {
+    to{
+        rotate: 360deg;
+    }
+}
+
+#config-display-modal{
+    display: none;
+}
+
+#carregamento{
+    border: 10px solid #32C5FA;
+    border-left: 10px solid #D7E6FB;
+    border-radius: 100%;
+    height: 75px;
+    width: 75px;
+    animation: rotacao 1s infinite linear;
+}
