@@ -93,10 +93,6 @@ input[type=text], input[type=number], input[type=email], input[type=tel]{
     height: 80%;
 }
 
-#config-display-form{
-    display: none;
-}
-
 #estilo-display-elementos{
     height: 100%;
     width: 100%;
@@ -146,4 +142,8 @@ input[type=text], input[type=number], input[type=email], input[type=tel]{
 #config-especifico2{
     background: black url('../img-fundo.jpg') center center no-repeat;
     background-size: cover;
+}
+
+#config-display-form{
+    display: none;
 }
