@@ -1,13 +1,15 @@
 @media screen and (max-width: 645px){
-    body{
-        background: red;
-    }
-    
     #config-especifico2{
         display: none;
     }
 
     .config-padrao{
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 620px){
+    body{
+        background: red;
     }
 }
