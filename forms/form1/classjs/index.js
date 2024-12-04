@@ -21,9 +21,15 @@ function eventoVerificar(){
     const RegEx_Telefone = /^\([0-9]{2}\) \+[0-9]{2} [0-9]{5}\-[0-9]{4}$/
     const RegEx_CPF = /^[0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2}$/
 
-    if(RegEx_Gmail.test(gmail) == true && RegEx_CPF.test(cpf) == true && RegEx_Telefone.test(telefone) == true && 
-    nome !== "" && senha !== "" && endereco !== "" && observacao !== ""){
-        alert('ok')
+    if(!(RegEx_Gmail.test(gmail) == true && RegEx_CPF.test(cpf) == true && RegEx_Telefone.test(telefone) == true && 
+    nome !== "" && senha !== "" && endereco !== "" && observacao !== "")){
+        setInterval(function(){
+            window.document.getElementById('estilo-mini-carregamento').style.display = "none"
+            window.document.getElementById('config-display-botao1').style.display = "block"
+        }, 3000)
+        window.document.getElementById('estilo-mini-carregamento').style.display = "block"
+        window.document.getElementById('config-display-botao1').style.display = "none"
+        window.document.getElementById('config-display-botao2').style.display = "none"
     }else{
         alert('erro')
     }

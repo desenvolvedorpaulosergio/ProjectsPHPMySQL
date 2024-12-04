@@ -54,7 +54,7 @@ body{
 #estilo-formulario{
     width: 100%;
     height: 350px; /*...*/
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 .estilo-botao-padrao{
@@ -79,6 +79,8 @@ body{
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .config-container-forms{
@@ -120,3 +122,20 @@ input[type=text], input[type=number], input[type=tel], input[type=email], input[
     flex-flow: row nowrap;
     justify-content: center;
 }
+
+#config-display-botao1{
+    display: block;
+}
+
+#estilo-mini-carregamento{
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    display: none;
+    padding: 10px;
+    border-radius: 100%;
+    border: 5px solid #d7e6fb;
+    border-top: 5px solid #32c5fa;
+    animation: rotacao 1s linear infinite;
+}
+
