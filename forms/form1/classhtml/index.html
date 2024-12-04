@@ -3,76 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Formulário PHP</title>
-    <link rel="stylesheet" href="../classcss/index.css">
-    <link rel="stylesheet" href="../classcss/responsividade.css">
-    <script src="../classjs/index.js"></script>
+    <title>Document</title>
 </head>
 <body>
-    <div id="estilo-apresentacao">
-        <div id="estilo-display-elementos">
-            <div class="config-padrao" id="config-especifico1">
-                <span>
-                    <h1>CADASTRE-SE</h1>
-                    <br>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quas cum dolores nat.
-                    </p>
-                    <br>
-                    <button id="estilo-botao1" onclick="eventoComecar()">COMEÇAR</button>
-                </span>
-            </div>
-            <div class="config-padrao" id="config-especifico2"></div>
-        </div>
-    </div>
-        <form method="post" action="../classphp/index.php" autocomplete="on" id="config-display-form2">
-            <div id="config-display-form">
-                <div id="container-form">
-                    <div class="container-padrao">
-                        <span> <br> <br>
-                            <label for="nome">
-                                <input type="text" name="nome" id="nome" placeholder="nome completo..." minlength="8" maxlength="30" required>
-                            </label> <br> <br>
-                            <label for="idade">
-                                <input type="number" name="idade" id="idade" placeholder="idade" min="10" max="110" required>
-                            </label> <br> <br>
-                            <label for="genero" id="config-genero">
-                                sexo:
-                                m <input type="radio" name="sexo" id="genero" checked value="m">
-                                f <input type="radio" name="sexo" id="genero" value="f">
-                                outro <input type="radio" name="sexo" id="genero" value="outro">
-                            </label> <br> <br>
-                            <label for="endereco">
-                                <textarea name="endereco" id="endereco" placeholder="endereço" minlength="8"></textarea>
-                            </label>
-                        </span>
-                    </div>
-                    <div class="container-padrao">
-                        <span> <br> <br>
-                            <label for="gmail">
-                                <input type="email" name="gmail" id="gmail" placeholder="gmail: exemplo@gmail.com" pattern="/^[a-z]{3,16}\@gmail\.com$/" required>
-                            </label> <br> <br>
-                            <label for="senha">
-                                <input type="text" name="senha" id="senha" placeholder="senha" required minlength="8">
-                            </label> <br> <br>
-                            <label for="telefone">
-                                <input type="tel" name="telefone" id="telefone" placeholder="telefone: (xx) +xx xxxxx-xxxx" required pattern="/^\([0-9]{2}\) \+55 9[0-9]{4}\-[0-9]{4}$/">
-                            </label> <br> <br>
-                            <label for="observacao">
-                                <textarea name="observacao" id="observacao" placeholder="observacao" minlength="4" required></textarea>
-                            </label>
-                        </span>
-                    </div>
-                </div>
-                <br> <br> <br>
-                <input type="submit" value="ENVIAR" id="estilo-botao">
-            </div>
-        </form>
     
-    <div id="config-display-modal">
-        <div id="estilo-modal">
-            <div id="carregamento"></div>
-        </div>
-    </div>
 </body>
 </html>
