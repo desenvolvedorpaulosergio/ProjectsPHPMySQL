@@ -24,40 +24,37 @@
                             <input type="text" name="nome" id="nome" placeholder="nome completo..." required minlength="8" maxlength="30">
                         </label>
                         <br> <br> <br>
-                        <label for="idade">
-                            <input type="number" name="idade" id="idade" min="12" max="115" required placeholder="idade">
+                        <label for="cpf">
+                            <input type="number" name="cpf" id="cpf" min="12" max="115" required placeholder="cpf: xxx.xxx.xxx-xx">
                         </label>
                         <br> <br>
                         <label for="genero" id="genero">
-                            sexo:
-                            <input type="radio" name="genero" id="" value="m" checked> m
-                            <input type="radio" name="genero" id="" value="f"> f
-                            <input type="radio" name="genero" id="" value="outro"> outro
+                            <span>sexo:</span>
+                            <span><input type="radio" name="genero" id="" value="m" checked> m</span>
+                            <span><input type="radio" name="genero" id="" value="f"> f</span>
+                            <span><input type="radio" name="genero" id="" value="outro"> outro</span>
                         </label>
-                        <br> <br>
+                        <br>
                         <label for="endereco">
                             <textarea name="endereco" id="endereco" placeholder="endereço"></textarea>
                         </label>
                     </div>
-                    
+
                     <div class="config-container-forms">
-                        <label for="nome">
-                            <input type="text" name="nome" id="nome" placeholder="nome completo..." required minlength="8" maxlength="30">
+                        <label for="gmail">
+                            <input type="email" name="gmail" id="gmail" placeholder="gmail: exemplo@gmail.com" required>
                         </label>
                         <br> <br> <br>
-                        <label for="idade">
-                            <input type="number" name="idade" id="idade" min="12" max="115" required placeholder="idade">
+                        <label for="senha">
+                            <input type="password" name="senha" id="senha" minlength="8" max="30" required placeholder="senha">
                         </label>
                         <br> <br>
-                        <label for="genero" id="genero">
-                            sexo:
-                            <input type="radio" name="genero" id="" value="m" checked> m
-                            <input type="radio" name="genero" id="" value="f"> f
-                            <input type="radio" name="genero" id="" value="outro"> outro
+                        <label for="telefone">
+                            <input type="tel" name="telefone" id="telefone" placeholder="telefone: (xx) +xx xxxxx-xxxx">
                         </label>
                         <br> <br>
-                        <label for="endereco">
-                            <textarea name="endereco" id="endereco" placeholder="endereço"></textarea>
+                        <label for="observacao">
+                            <textarea name="observacao" id="observacao" placeholder="observacao"></textarea>
                         </label>
                     </div>
                 </div>
@@ -65,7 +62,7 @@
                 <!-- <input type="submit" value="CADASTRAR" class="estilo-botao-padrao"> -->
             </form>
         </div>
-        <button class="estilo-botao-padrao">VERIFICAR</button>
+        <button class="estilo-botao-padrao" onclick="eventoVerificar()">VERIFICAR</button>
     </div>
 
 </body>

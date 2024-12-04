@@ -75,8 +75,8 @@ body{
 }
 
 #config-form{
-    height: 100%;
     padding: 40px 20px;
+    height: 100%;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -87,7 +87,7 @@ body{
     /* border: 1px solid black; */
 }
 
-input[type=text], input[type=number], input[type=tel], #endereco{
+input[type=text], input[type=number], input[type=tel], input[type=email], input[type=password], #endereco, #observacao{
     font: normal normal 20px 'arial';
     border: 1px solid black;
     border-radius: 5px;
@@ -98,17 +98,25 @@ input[type=text], input[type=number], input[type=tel], #endereco{
 
 #genero{
     font: normal normal 20px 'arial';
+    text-align: center;
     color: #575757;
     padding: 10px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 
-#endereco{
+#endereco, #observacao{
     height: 85px;
 }
 
 #div-form{
     width: 100%;
     display: flex;
+    align-items: center;
     flex-flow: row nowrap;
     justify-content: center;
 }
