@@ -26,7 +26,7 @@ function eventoVerificar(){
         setInterval(function(){
             window.document.getElementById('estilo-mini-carregamento').style.display = "none"
             window.document.getElementById('config-display-botao1').style.display = "block"
-        }, 3000)
+        }, 2000)
         window.document.getElementById('estilo-mini-carregamento').style.display = "block"
         window.document.getElementById('config-display-botao1').style.display = "none"
         window.document.getElementById('config-display-botao2').style.display = "none"
