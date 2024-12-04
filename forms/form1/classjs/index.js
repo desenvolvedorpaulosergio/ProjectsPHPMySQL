@@ -23,6 +23,7 @@ function eventoVerificar(){
 
     if(RegEx_Gmail.test(gmail) == true && RegEx_CPF.test(cpf) == true && RegEx_Telefone.test(telefone) == true && 
     nome !== "" && senha !== "" && endereco !== "" && observacao !== ""){
+        window.document.getElementById('mensagem-erro').style.display = "none"
         setInterval(function(){
             window.document.getElementById('estilo-mini-carregamento').style.display = "none"
             window.document.getElementById('config-display-botao1').style.display = "block"
@@ -30,16 +31,18 @@ function eventoVerificar(){
         window.document.getElementById('estilo-mini-carregamento').style.display = "block"
         window.document.getElementById('config-display-botao1').style.display = "none"
         window.document.getElementById('config-display-botao2').style.display = "none"
+
+        window.document.querySelectorAll('input').forEach(function(elementos){
+            elementos.disabled = true
+        })
+
+        window.document.querySelectorAll('textarea').forEach(function(elementos){
+            elementos.disabled = true
+        })
+
+        window.document.getElementById('config-display-botao1').disabled = false
+
     }else{
-        setTimeout(function(){
-            window.document.getElementById('estilo-mini-carregamento').style.display = "none"
-            window.document.getElementById('mensagem-erro').style.display = "block"
-            setInterval(function(){
-                window.document.getElementById('config-display-botao2').style.display = "block"
-                window.document.getElementById('mensagem-erro').style.display = "none"
-            }, 1000)
-        }, 2000)
-        window.document.getElementById('estilo-mini-carregamento').style.display = "block"
-        window.document.getElementById('config-display-botao2').style.display = "none"
+        window.document.getElementById('mensagem-erro').style.display = "block"
     }
 }
