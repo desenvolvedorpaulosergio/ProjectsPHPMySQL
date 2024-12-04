@@ -17,10 +17,52 @@
 
     <div id="config-display-form">
         <div id="estilo-formulario">
-            <form action="../classphp/index.php">
-                <div class=""></div>
-                <div class=""></div>
-                <button class="estilo-botao-padrao">CADASTRAR</button>
+            <form action="../classphp/index.php" id="config-form">
+                <div id="div-form">
+                    <div class="config-container-forms">
+                        <label for="nome">
+                            <input type="text" name="nome" id="nome" placeholder="nome completo..." required minlength="8" maxlength="30">
+                        </label>
+                        <br> <br> <br>
+                        <label for="idade">
+                            <input type="number" name="idade" id="idade" min="12" max="115" required placeholder="idade">
+                        </label>
+                        <br> <br>
+                        <label for="genero" id="genero">
+                            sexo:
+                            <input type="radio" name="genero" id="" value="m" checked> m
+                            <input type="radio" name="genero" id="" value="f"> f
+                            <input type="radio" name="genero" id="" value="outro"> outro
+                        </label>
+                        <br> <br>
+                        <label for="endereco">
+                            <textarea name="endereco" id="endereco" placeholder="endereço"></textarea>
+                        </label>
+                    </div>
+                    
+                    <div class="config-container-forms">
+                        <label for="nome">
+                            <input type="text" name="nome" id="nome" placeholder="nome completo..." required minlength="8" maxlength="30">
+                        </label>
+                        <br> <br> <br>
+                        <label for="idade">
+                            <input type="number" name="idade" id="idade" min="12" max="115" required placeholder="idade">
+                        </label>
+                        <br> <br>
+                        <label for="genero" id="genero">
+                            sexo:
+                            <input type="radio" name="genero" id="" value="m" checked> m
+                            <input type="radio" name="genero" id="" value="f"> f
+                            <input type="radio" name="genero" id="" value="outro"> outro
+                        </label>
+                        <br> <br>
+                        <label for="endereco">
+                            <textarea name="endereco" id="endereco" placeholder="endereço"></textarea>
+                        </label>
+                    </div>
+                </div>
+                <div class="config-container-forms"></div>
+                <!-- <input type="submit" value="CADASTRAR" class="estilo-botao-padrao"> -->
             </form>
         </div>
         <button class="estilo-botao-padrao">VERIFICAR</button>
