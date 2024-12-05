@@ -25,6 +25,7 @@ body{
     align-content: center;
     justify-content: center;
     flex-flow: column nowrap;
+    margin: 0px 20px;
 }
 
 #estilo-formulario{
@@ -78,7 +79,7 @@ input[type=email], input[type=password]{
     text-align: left;
 }
 
-.estilo-botao-padrao{
+#estilo-botao{
     font: normal normal 20px 'arial';
     background: #32c5fa;
     border-radius: 5px;
@@ -88,9 +89,50 @@ input[type=email], input[type=password]{
     padding: 10px;
     margin: auto;
     border: none;
-    width: 70%;
+    width: 95%;
 }
 
-.estilo-botao-padrao:active{
+#estilo-botao:active{
     transform: scale(0.95);
+}
+
+#estilo-palavras1, #estilo-palavras2{
+    font: normal normal 18px 'arial';
+    color: #575757;
+}
+
+#estilo-palavras2{
+    color: #32c5fa;
+}
+
+#mensagem-erro{
+    font: normal normal 15px 'arial';
+    display: none;
+    color: red;
+}
+
+#config-display-mensagem{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#config-flex-mensagem{
+    width: 100dvw;
+    display: flex;
+    height: 100dvh;
+    color: #32c5fa;
+    text-align: center;
+    background: white;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: center;
+    font: normal normal 40px 'arial';
+    text-shadow: 3px 3px 5px #00000046;
+}
+
+#config-celular{
+    font-size: 100px;
+    rotate: -90deg;
 }
