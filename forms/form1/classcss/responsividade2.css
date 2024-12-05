@@ -1,3 +1,5 @@
 @media screen and (orientation: portrait) and (max-width: 632px){
-    
+    #config-display-mensagem{
+        display: block;
+    }
 }
