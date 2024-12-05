@@ -1,5 +1,5 @@
-@media screen and (max-width: 550px){
-    body{
-        background: red;
+@media screen and (orientation: portrait) and (max-width: 560px){
+    #config-display-mensagem{
+        display: block;
     }
 }

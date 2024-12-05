@@ -14,6 +14,12 @@ body{
     justify-content: center;
 }
 
+#config-display-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 #config-container{
     background: white;
     height: 100dvh;
@@ -78,16 +84,14 @@ body{
     padding: 40px 20px;
     height: 100%;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
     align-items: center;
-    /* border: 1px solid black; */
+    justify-content: center;
+    flex-flow: column nowrap;
 }
 
 .config-container-forms{
     width: 50%;
     height: 100%;
-    /* border: 1px solid black; */
 }
 
 input[type=text], input[type=number], input[type=tel], input[type=email], input[type=password], #endereco, #observacao{
@@ -144,4 +148,30 @@ input[type=text], input[type=number], input[type=tel], input[type=email], input[
     font: normal normal 15px 'arial';
     display: none;
     color: red;
+}
+
+#config-display-mensagem{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#config-flex-mensagem{
+    width: 100dvw;
+    display: flex;
+    height: 100dvh;
+    color: #32c5fa;
+    text-align: center;
+    background: white;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: center;
+    font: normal normal 40px 'arial';
+    text-shadow: 3px 3px 5px #00000046;
+}
+
+#config-celular{
+    font-size: 100px;
+    rotate: -90deg;
 }
