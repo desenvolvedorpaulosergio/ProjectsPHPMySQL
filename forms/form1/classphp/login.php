@@ -20,7 +20,7 @@
                     </label>
                     <br> <br>
                     <label for="senha">
-                        <input type="password" name="gmail" id="gmail" placeholder="senha" required>
+                        <input type="password" name="senha" id="" placeholder="senha" required>
                     </label> 
                     <br> <br>
                     <span id="estilo-palavras1">não é registrado?</span> <a href="../classphp/formulario.php" id="estilo-palavras2">cadastre-se!</a>
@@ -28,10 +28,25 @@
                     <button id="estilo-botao" name="botao-entrar">ENTRAR</button> <br>
                     <div>
                         <?php
-                        
-                            $con = new mysqli('127.0.0.1:3306','root','','cadastro_pessoas');
-                            $consulta = 
+                            error_reporting(E_ERROR | E_PARSE);
+                            if(isset($_POST['botao-entrar'])){
+                                $gmail = $_POST['gmail'];
+                                $senha = $_POST['senha'];
 
+                                $con =  new mysqli('127.0.0.1:3306','root','','cadastro_pessoas');
+                                $consulta_gmail = "SELECT gmail as 'gmail' FROM registros WHERE gmail = '$gmail'";
+                                $execucao_gmail = $con -> query($consulta_gmail);
+                                $resultado_gmail = $execucao_gmail -> fetch_assoc();
+
+                                $consulta_senha = "SELECT senha 'senha' FROM registros WHERE gmail = '$gmail'";
+                                $execucao_senha = $con -> query($consulta_senha);
+                                $resultado_senha = $execucao_senha -> fetch_assoc();
+                                if($resultado_gmail['gmail'] == $gmail && $resultado_senha['senha'] = $senha){
+                                    header("Location: ../classphp/dados.php");
+                                }else{
+                                    print "<br> <h2>gmail ou senha inválidos!!!</h2>";
+                                }
+                            }
                         ?>
                     </div>
                 </form>
