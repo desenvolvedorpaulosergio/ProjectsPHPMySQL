@@ -23,9 +23,17 @@
                         <input type="password" name="gmail" id="gmail" placeholder="senha" required>
                     </label> 
                     <br> <br>
-                    <span id="estilo-palavras1">não é registrado?</span> <a href="#" id="estilo-palavras2">cadastre-se!</a>
+                    <span id="estilo-palavras1">não é registrado?</span> <a href="../classphp/formulario.php" id="estilo-palavras2">cadastre-se!</a>
                     <br> <br>
-                    <button id="estilo-botao" name="botao-entrar">ENTRAR</button>
+                    <button id="estilo-botao" name="botao-entrar">ENTRAR</button> <br>
+                    <div>
+                        <?php
+                        
+                            $con = new mysqli('127.0.0.1:3306','root','','cadastro_pessoas');
+                            $consulta = 
+
+                        ?>
+                    </div>
                 </form>
             </div>
             <div class="estilo-container-padrao" id="estilo-container-especifico2"></div>
