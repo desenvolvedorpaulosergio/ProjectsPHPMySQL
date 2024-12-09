@@ -22,7 +22,7 @@ function eventoVerificar(){
     const RegEx_CPF = /^[0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2}$/
 
     if(RegEx_Gmail.test(gmail) == true && RegEx_CPF.test(cpf) == true && RegEx_Telefone.test(telefone) == true && 
-    nome !== "" && senha !== "" && endereco !== "" && observacao !== ""){
+    nome !== "" && senha.length >= 8 && endereco !== "" && observacao !== ""){
         window.document.getElementById('mensagem-erro').style.display = "none"
         setInterval(function(){
             window.document.getElementById('estilo-mini-carregamento').style.display = "none"
@@ -33,14 +33,14 @@ function eventoVerificar(){
         window.document.getElementById('config-display-botao2').style.display = "none"
 
         window.document.querySelectorAll('input').forEach(function(elementos){
-            elementos.disabled = true
+            elementos.readOnly = true
         })
 
         window.document.querySelectorAll('textarea').forEach(function(elementos){
-            elementos.disabled = true
+            elementos.readOnly = true
         })
 
-        window.document.getElementById('config-display-botao1').disabled = false
+        window.document.getElementById('config-display-botao1').readOnly = false
 
     }else{
         window.document.getElementById('mensagem-erro').style.display = "block"
