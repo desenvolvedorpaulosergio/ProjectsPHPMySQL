@@ -136,3 +136,8 @@ input[type=email], input[type=password]{
     font-size: 100px;
     rotate: -90deg;
 }
+
+h2{
+    font: normal normal 15px 'arial';
+    color: red;
+}
