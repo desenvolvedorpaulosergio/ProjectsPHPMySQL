@@ -41,7 +41,11 @@
                                 $consulta_senha = "SELECT senha 'senha' FROM registros WHERE gmail = '$gmail'";
                                 $execucao_senha = $con -> query($consulta_senha);
                                 $resultado_senha = $execucao_senha -> fetch_assoc();
-                                if($resultado_gmail['gmail'] == $gmail && $resultado_senha['senha'] = $senha){
+
+                                session_start();
+                                $_SESSION['gmail_usuario'] = $gmail;
+
+                                if($resultado_gmail['gmail'] == $gmail && $resultado_senha['senha'] == $senha){
                                     header("Location: ../classphp/dados.php");
                                 }else{
                                     print "<br> <h2>gmail ou senha inválidos!!!</h2>";

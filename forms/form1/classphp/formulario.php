@@ -69,13 +69,16 @@
                 <button class="estilo-botao-padrao" id="config-display-botao1" name="cadastrar">CADASTRAR</button>
                 <br> <br>
                 <?php
+
+                error_reporting(E_ERROR | E_PARSE);
+
                 if(isset($_POST['cadastrar'])){
                     $nome = $_POST['nome'];
                     $cpf = $_POST['cpf'];
                     $genero = $_POST['genero'];
                     $endereco = $_POST['endereco'];
                     $gmail = $_POST['gmail'];
-                    $senha = md5($_POST['senha']);
+                    $senha = $_POST['senha'];
                     $telefone = $_POST['telefone'];
                     $observacao = $_POST['observacao'];
 
