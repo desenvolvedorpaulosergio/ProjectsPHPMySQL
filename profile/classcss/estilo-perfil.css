@@ -69,5 +69,5 @@ body{
     height: 10px;
     border-radius: 10px;
     background: #2c3462;
-    animation: carregamento 2s ease-in-out;
+    animation: carregamento 2s ease-in both;
 }
