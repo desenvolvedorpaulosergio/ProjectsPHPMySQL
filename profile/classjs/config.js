@@ -17,6 +17,10 @@ function eventoVerificar(){
         setInterval(function(){
             window.document.getElementById('config-carregamento').style.display = "none"
         }, 2000)
+        
+        document.querySelectorAll('.config-input').forEach(function(elementos){
+            elementos.readOnly = true
+        })
     }else{
         
     }
