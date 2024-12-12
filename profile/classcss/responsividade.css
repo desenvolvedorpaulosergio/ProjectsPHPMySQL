@@ -16,5 +16,21 @@
     #config-botao-div{
         width: 70%;
     }
+}
 
+@media screen and (max-width: 630px){
+    #config-form{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .estilo-div-padrao{
+        min-height: auto;
+        width: 100dvw;
+    }
+
+    #estilo-div-especifico1{
+        padding: 40px 0px;
+        margin-bottom: 10px;
+    }    
 }
