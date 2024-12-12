@@ -14,6 +14,10 @@ body{
     justify-content: center;
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
 #config-display{
     position: absolute;
     display: block;
@@ -162,6 +166,7 @@ body{
     background: #2C3462;
     border: 5px solid #2C3462;
     border-radius: 100%;
+    transition: 200ms;
 }
 
 #estilo-especifico{
@@ -190,6 +195,7 @@ body{
 
 .config-display-label > input[type=text]{
     font: normal normal 35px 'arial';
+    transition: 300ms;
     color: #4C4C4C;
     border: none;
     width: 75%;
