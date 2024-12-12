@@ -234,3 +234,10 @@ body{
     border-top: 8px solid #2C3462;
     animation: carregamento2 1s linear infinite;
 }
+
+#mensagem-selecao{
+    font: normal normal 20px 'arial';
+    margin-top: 20px; 
+    color: green;  
+    display: none;
+}

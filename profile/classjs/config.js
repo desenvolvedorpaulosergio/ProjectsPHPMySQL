@@ -11,9 +11,13 @@ function eventoVerificar(){
 
     const regEx_Telefone = /^\([0-9]{2}\) \+[0-9]{2} [0-9]{5}\-[0-9]{4}$/
 
-    if(regEx_Telefone.test(telefone) == true && nome.length >= 3 && sobre != ""){
-        alert('ok')
+    if(!(regEx_Telefone.test(telefone) == true && nome.length >= 3 && sobre != "" && file != "")){
+        window.document.getElementById('config-carregamento').style.display = "block"
+        window.document.getElementById('config-botao-div').style.display = "none"
+        setInterval(function(){
+            window.document.getElementById('config-carregamento').style.display = "none"
+        }, 2000)
     }else{
-        alert('erro')
+        
     }
 }
