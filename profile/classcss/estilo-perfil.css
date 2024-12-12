@@ -86,7 +86,7 @@ body{
 #estilo-perfil{
     background: #E1E1E1;
     height: 100dvh;
-    width: 400px;
+    width: 350px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -108,4 +108,20 @@ body{
 .material-symbols-outlined{
     font-size: 30px;
     font-weight: bolder;
+}
+
+.estilo-botao-padrao{
+    font: normal normal 25px "arial";
+    background: #2C3462;
+    border-radius: 5px;
+    transition: 300ms;
+    color: #d7e6fb;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    width: 75%;
+}
+
+.estilo-botao-padrao:active{
+    transform: scale(0.95);
 }
