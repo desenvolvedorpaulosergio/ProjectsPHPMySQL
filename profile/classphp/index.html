@@ -43,10 +43,10 @@
         </div>
     </div> -->
     <div id="config-display-form">
-        <form id="config-form" method="post">
+        <div id="config-form" method="post">
             <div class="estilo-div-padrao" id="estilo-div-especifico1">
                 <img src="../resources/icon-camera.png" alt="icon-camera" id="estilo-camera">
-                <input type="file" name="config-input-file" id="condig-file" accept=".jpg, .jpeg, .png">
+                <input type="file" name="config-input-file" id="arquivo" accept=".jpg, .jpeg, .png">
                 <button class="estilo-botao-padrao" id="estilo-especifico" onclick="document.getElementById('condig-file').click()">escolher arquivo</button>
             </div>
             <div class="estilo-div-padrao" id="estilo-div-especifico2">
@@ -56,20 +56,21 @@
                         <span class="material-symbols-outlined">edit</span>
                     </label>
                     <label for="telefone" class="config-display-label">
-                        <input type="text" name="telefone" id="nome" required placeholder="tel: (xx) +xx xxxxx-xxxx">
+                        <input type="text" name="telefone" id="telefone" required placeholder="tel: (xx) +xx xxxxx-xxxx">
                         <span class="material-symbols-outlined">edit</span>
                     </label>
                     <label for="sobre" class="config-display-label">
-                        <input type="text" name="sobre" id="nome" required placeholder="sobre" minlength="4">
+                        <input type="text" name="sobre" id="sobre" required placeholder="sobre" minlength="4">
                         <span class="material-symbols-outlined">edit</span>
                     </label>
-                    <div class="estilo-botao-padrao" id="config-botao-div">verificar</div>
+                    <div class="estilo-botao-padrao" id="config-botao-div" onclick="eventoVerificar()">verificar</div>
                     <p id="estilo-mensagem-erro">
                         preencha o formulário corretamente!
                     </p>
+                    <div id="config-carregamento"></div>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
 </body>
 </html>

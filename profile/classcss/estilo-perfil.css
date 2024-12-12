@@ -169,7 +169,7 @@ body{
     margin-top: 20px;
 }
 
-#condig-file{
+#arquivo{
     display: none;
 }
 
@@ -212,5 +212,25 @@ body{
 }
 
 #estilo-mensagem-erro{
-    
+    font: normal normal 20px 'arial';
+    margin: 20px 0px;
+    display: none;
+    color: red;
+}
+
+@keyframes carregamento2 {
+    to{
+        rotate: 360deg;
+    }
+}
+
+#config-carregamento{
+    display: none;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    border-radius: 100%;
+    border: 8px solid #E1E1E1;
+    border-top: 8px solid #2C3462;
+    animation: carregamento2 1s linear infinite;
 }
