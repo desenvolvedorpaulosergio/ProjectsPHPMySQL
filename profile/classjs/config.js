@@ -14,10 +14,13 @@ function eventoVerificar(){
     if(!(regEx_Telefone.test(telefone) == true && nome.length >= 3 && sobre != "" && file != "")){
         window.document.getElementById('config-carregamento').style.display = "block"
         window.document.getElementById('config-botao-div').style.display = "none"
+        window.document.getElementById('estilo-especifico').style.display = "none"
         setInterval(function(){
             window.document.getElementById('config-carregamento').style.display = "none"
         }, 2000)
-        
+
+
+
         document.querySelectorAll('.config-input').forEach(function(elementos){
             elementos.readOnly = true
         })
