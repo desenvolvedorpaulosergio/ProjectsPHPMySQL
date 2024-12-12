@@ -126,16 +126,3 @@ body{
 .estilo-botao-padrao:active{
     transform: scale(0.95);
 }
-
-#config-display-container{
-    background: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-}
-
-#config-flex-container{
-    height: 100dvh;
-    width: 100dvw;
-}
