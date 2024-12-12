@@ -6,6 +6,7 @@
     <title>Projeto Perfil de Usuário</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=info" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=edit" />
     <link rel="stylesheet" href="../classcss/estilo-perfil.css">
     <link rel="stylesheet" href="../classcss/responsividade.css">
     <script src="../classjs/config.js"></script>
@@ -42,13 +43,31 @@
         </div>
     </div> -->
     <div id="config-display-form">
-        <form id="config-form">
+        <form id="config-form" method="post">
             <div class="estilo-div-padrao" id="estilo-div-especifico1">
                 <img src="../resources/icon-camera.png" alt="icon-camera" id="estilo-camera">
-                <input type="file" name="" id="condig-file" accept=".jpg, .jpeg, .png">
-                <button class="estilo-botao-padrao" id="estilo-especifico" onclick="">escolher arquivo</button>
+                <input type="file" name="config-input-file" id="condig-file" accept=".jpg, .jpeg, .png">
+                <button class="estilo-botao-padrao" id="estilo-especifico" onclick="document.getElementById('condig-file').click()">escolher arquivo</button>
             </div>
             <div class="estilo-div-padrao" id="estilo-div-especifico2">
+                <div id="estilo-div">
+                    <label for="nome" class="config-display-label config-display-label2">
+                        <input type="text" name="nome" id="nome" required placeholder="nome usuário" minlength="3" maxlength="30">
+                        <span class="material-symbols-outlined">edit</span>
+                    </label>
+                    <label for="telefone" class="config-display-label">
+                        <input type="text" name="telefone" id="nome" required placeholder="tel: (xx) +xx xxxxx-xxxx">
+                        <span class="material-symbols-outlined">edit</span>
+                    </label>
+                    <label for="sobre" class="config-display-label">
+                        <input type="text" name="sobre" id="nome" required placeholder="sobre" minlength="4">
+                        <span class="material-symbols-outlined">edit</span>
+                    </label>
+                    <div class="estilo-botao-padrao" id="config-botao-div">verificar</div>
+                    <p id="estilo-mensagem-erro">
+                        preencha o formulário corretamente!
+                    </p>
+                </div>
             </div>
         </form>
     </div>

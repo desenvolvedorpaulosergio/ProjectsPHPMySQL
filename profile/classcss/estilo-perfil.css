@@ -111,7 +111,7 @@ body{
 
 .material-symbols-outlined{
     font-size: 30px;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .estilo-botao-padrao{
@@ -167,4 +167,50 @@ body{
 #estilo-especifico{
     width: 280px;
     margin-top: 20px;
+}
+
+#condig-file{
+    display: none;
+}
+
+#estilo-div-especifico2{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.config-display-label{
+    justify-content: center;
+    margin: 50px 0px;
+    display: flex;
+    width: 100%;
+}
+
+.config-display-label > input[type=text]{
+    font: normal normal 35px 'arial';
+    color: #4C4C4C;
+    border: none;
+    width: 75%;
+    padding: 1px 10px;
+    border-bottom: 4px solid #2C3462;
+}
+
+#config-botao-div{
+    text-align: center;
+    margin: auto;
+    width: 70%;
+}
+
+#estilo-div{
+    width: 100%;
+}
+
+.config-display-label2{
+    margin-top: 0px;
+}
+
+#estilo-mensagem-erro{
+    
 }
