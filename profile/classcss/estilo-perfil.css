@@ -7,7 +7,6 @@
 
 body{
     overflow-x: hidden;
-    /* min-height: 100dvh;  */
     width: 100dvw;
     display: flex;
     align-items: flex-start;
@@ -84,6 +83,10 @@ body{
     animation: carregamento 2s ease-in both;
 }
 
+#condig-display-perfil{
+    display: block;
+}
+
 #estilo-perfil{
     background: #E1E1E1;
     min-height: 100dvh;
@@ -125,4 +128,43 @@ body{
 
 .estilo-botao-padrao:active{
     transform: scale(0.95);
+}
+
+#config-display-form{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#config-form{
+    min-height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.estilo-div-padrao{
+    min-height: 100dvh;
+    width: 50dvw;
+}
+
+#estilo-div-especifico1{
+    background: #E1E1E1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#estilo-camera{
+    width: 220px;
+    background: #2C3462;
+    border: 5px solid #2C3462;
+    border-radius: 100%;
+}
+
+#estilo-especifico{
+    width: 280px;
+    margin-top: 20px;
 }
