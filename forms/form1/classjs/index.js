@@ -40,6 +40,8 @@ function eventoVerificar(){
             elementos.readOnly = true
         })
 
+        
+
         window.document.getElementById('config-display-botao1').readOnly = false
 
     }else{

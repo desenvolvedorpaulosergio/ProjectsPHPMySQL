@@ -17,6 +17,7 @@ function eventoVerificar(){
         window.document.getElementById('estilo-especifico').style.display = "none"
         setInterval(function(){
             window.document.getElementById('config-carregamento').style.display = "none"
+            window.document.getElementById('display-block-botao').style.display = "block"
         }, 2000)
 
         document.querySelectorAll('.config-input').forEach(function(elementos){
@@ -25,4 +26,21 @@ function eventoVerificar(){
     }else{
         
     }
+}
+
+function eventoCancelar(){
+    setInterval(function(){
+        window.document.getElementById('').style.display = "none";
+    },2000)
+}
+
+function eventoVoltar(){
+    window.document.getElementById('config-carregamento').style.display = "block"
+        window.document.querySelectorAll('.padrao-display').forEach(function(elementos){
+            elementos.style.display = "none"
+        })
+    setInterval(function(){
+        window.document.getElementById('condig-display-perfil').style.display = "block"
+        window.document.getElementById('config-display-form').style.display = "none"
+    }, 2000)
 }

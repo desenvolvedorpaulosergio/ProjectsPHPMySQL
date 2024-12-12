@@ -179,6 +179,7 @@ body::-webkit-scrollbar{
 }
 
 #estilo-div-especifico2{
+    background: white;
     text-align: center;
     display: flex;
     align-items: center;
@@ -245,5 +246,21 @@ body::-webkit-scrollbar{
     font: normal normal 20px 'arial';
     margin-top: 20px; 
     color: green;  
+    display: none;
+}
+
+#display-botao{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    gap: 2px;
+}
+
+.estilo-botao-padrao2{
+    margin: auto;
+    width: 200px;
+}
+
+#display-block-botao{
     display: none;
 }
