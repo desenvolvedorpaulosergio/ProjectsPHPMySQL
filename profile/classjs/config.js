@@ -1,7 +1,9 @@
+window.document.addEventListener('DOMContentLoaded', function(){
     setInterval(function(){
-    window.document.getElementById('condig-display-perfil').style.display = "block"
-    window.document.getElementById('config-display').style.display = "none"
-},2500)
+        window.document.getElementById('condig-display-perfil').style.display = "block"
+        window.document.getElementById('config-display').style.display = "none"
+    },2500)
+})
 
 function eventoVerificar(){
     let nome = window.document.getElementById('nome').value
@@ -11,7 +13,7 @@ function eventoVerificar(){
 
     const regEx_Telefone = /^\([0-9]{2}\) \+[0-9]{2} [0-9]{5}\-[0-9]{4}$/
 
-    if(!(regEx_Telefone.test(telefone) == true && nome.length >= 3 && sobre != "" && file != "")){
+    if(regEx_Telefone.test(telefone) == true && nome.length >= 3 && sobre != "" && file != ""){
         window.document.getElementById('config-carregamento').style.display = "block"
         window.document.getElementById('config-botao-div').style.display = "none"
         window.document.getElementById('estilo-especifico').style.display = "none"
@@ -27,6 +29,9 @@ function eventoVerificar(){
         document.querySelectorAll('.config-input').forEach(function(elementos){
             elementos.readOnly = true
         })
+
+        window.document.getElementById('estilo-mensagem-erro').style.display = "none"
+
     }else{
         window.document.getElementById('estilo-mensagem-erro').style.display = "block"
     }
