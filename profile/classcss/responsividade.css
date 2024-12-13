@@ -11,8 +11,8 @@
 
     .config-display-label > input[type=text]{
         font-size: 20px;
-        width: 70%;
         padding: 5px;
+        width: 70%;
     }
 }
 
@@ -38,6 +38,17 @@
 
     .config-display-label > input[type=text]{
         font-size: 25px;
+    }
+
+}
+
+@media screen and (orientation: landscape) and (max-height: 440px){
+    #config-perfil2{
+        width: 150px;
+    }
+
+    #estilo-titulo{
+        font-size: 35px;
     }
 
 }

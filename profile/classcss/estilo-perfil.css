@@ -61,6 +61,7 @@ body::-webkit-scrollbar{
     border: 8px solid #2c3462;
     background: #2c3462;
     border-radius: 100%;
+    transition: 200ms;
     width: 200px;
 }
 
@@ -102,8 +103,9 @@ body::-webkit-scrollbar{
 }
 
 #estilo-titulo{
-    font: normal normal 50px 'arial';
+    font: normal normal 40px 'arial';
     color: #525456;
+    text-align: center;
 }
 
 .estilo-texto{
@@ -135,7 +137,7 @@ body::-webkit-scrollbar{
 }
 
 #config-display-form{
-    display: block;
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -231,7 +233,7 @@ body::-webkit-scrollbar{
     }
 }
 
-#config-carregamento{
+#config-carregamento, #config-carregamento1{
     display: none;
     width: 50px;
     height: 50px;
@@ -240,6 +242,11 @@ body::-webkit-scrollbar{
     border: 8px solid #E1E1E1;
     border-top: 8px solid #2C3462;
     animation: carregamento2 1s linear infinite;
+}
+
+#config-carregamento1{
+    display: none;
+    margin: 0;
 }
 
 #mensagem-selecao{
