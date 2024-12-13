@@ -20,7 +20,7 @@ function eventoVerificar(){
             window.document.getElementById('config-carregamento').style.display = "none"
             window.document.getElementById('display-block-botao').style.display = "block"
         }, 2000)
-
+        
         window.document.getElementById('evento-enviar').style.display = "block"
         window.document.getElementById('evento-cancelar').style.display = "block"
 
@@ -48,10 +48,13 @@ function eventoVoltar(){
 function eventoCancelar(){
     window.document.getElementById('config-botao-div').style.display = "block"
     window.document.getElementById('config-botao-div2').style.display = "block"
+    window.document.getElementById('estilo-especifico').style.display = "block"
 
     window.document.getElementById('evento-enviar').style.display = "none"
     window.document.getElementById('evento-cancelar').style.display = "none"
 
-    
+    document.querySelectorAll('.config-input').forEach(function(elementos){
+        elementos.readOnly = false
+    })
 
 }

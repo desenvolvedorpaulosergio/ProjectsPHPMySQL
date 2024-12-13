@@ -137,7 +137,7 @@ body::-webkit-scrollbar{
 }
 
 #config-display-form{
-    display: block;
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
