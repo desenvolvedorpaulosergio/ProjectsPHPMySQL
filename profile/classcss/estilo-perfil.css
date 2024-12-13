@@ -137,7 +137,7 @@ body::-webkit-scrollbar{
 }
 
 #config-display-form{
-    display: none;
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -206,7 +206,7 @@ body::-webkit-scrollbar{
     border-bottom: 4px solid #2C3462;
 }
 
-#config-botao-div{
+#config-botao-div, #config-botao-div2{
     text-align: center;
     margin: auto;
     width: 70%;
