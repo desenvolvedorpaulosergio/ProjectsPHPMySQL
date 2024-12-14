@@ -14,6 +14,13 @@
         padding: 5px;
         width: 70%;
     }
+
+    #display-botao{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        gap: 3px;
+    }
 }
 
 @media screen and (max-width: 630px){
@@ -39,7 +46,6 @@
     .config-display-label > input[type=text]{
         font-size: 25px;
     }
-
 }
 
 @media screen and (orientation: landscape) and (max-height: 440px){
@@ -51,4 +57,7 @@
         font-size: 35px;
     }
 
+    .config-display-label{
+        margin: 25px 0px;
+    }
 }
