@@ -2,7 +2,7 @@ window.document.addEventListener('DOMContentLoaded', function(){
     setInterval(function(){
         window.document.getElementById('condig-display-perfil').style.display = "block"
         window.document.getElementById('config-display').style.display = "none"
-    },2500)
+    }, 2500)
 })
 
 function eventoVerificar(){
@@ -47,7 +47,7 @@ function mudarPerfil(){
 }
 
 function eventoVoltar(){
-    window.location = "../classphp/index.html";
+    window.location = "../classphp/index.php";
 }
 
 function eventoCancelar(){
