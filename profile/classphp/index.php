@@ -14,7 +14,15 @@
     <div id="config-display">
         <div id="condig-carregamento">
             <div id="modal-carregamento">
-                <img src="../resources/icon-user.png" alt="" id="config-perfil">
+                <?php
+                    $con = new mysqli('127.0.0.1:3306','root','','bd_profile');
+                    $consulta = "SELECT * FROM dados_perfil ORDER BY cod DESC LIMIT 1";
+                    $execucao = $con -> query($consulta);
+                    $resultado = $execucao -> fetch_assoc();
+                ?>
+                <div id="config-perfil">
+                    <img src="../resources/<?=$resultado['img']?>" alt="" id="config-img">
+                </div>
                 <h1>BEM VINDO, USUÁRIO!</h1>  
                     <br>
                     <div id="barra-completa">
@@ -27,15 +35,15 @@
     </div>
     <div id="condig-display-perfil">
         <div id="estilo-perfil">
-            <img src="../resources/icon-user.png" alt="" id="config-perfil2">
-            <h1 id="estilo-titulo">nome usuário</h1>
+            <img src="../resources/<?=$resultado['img']?>" alt="" id="config-perfil2">
+            <h1 id="estilo-titulo"><?=$resultado['nome']?></h1>
             <br>
             <span class="estilo-texto">
-                <span class="material-symbols-outlined">call</span> (xx) +xx xxxxx-xxxx
+                <span class="material-symbols-outlined">call</span> <?=$resultado['telefone']?>
             </span>
             <br>
             <span class="estilo-texto">
-                <b>(!)</b> observação
+                <b>(!)</b> <?=$resultado['observacao']?>
             </span>
             <br>
             <button class="estilo-botao-padrao" id="botao-mudar-perfil" onclick="mudarPerfil()">mudar perfil</button>
@@ -43,11 +51,11 @@
         </div>
     </div>
     <div id="config-display-form">
-        <form id="config-form" method="post">
+        <form id="config-form" method="post" enctype="multipart/form-data">
             <div class="estilo-div-padrao" id="estilo-div-especifico1">
                 <img src="../resources/icon-camera.png" alt="icon-camera" id="estilo-camera">
                 <input type="file" name="config-input-file" id="arquivo" accept=".jpg, .jpeg, .png">
-                <div class="estilo-botao-padrao" id="estilo-especifico" onclick="document.getElementById('arquivo').click(), eventoFile()" onkeyup="alert('oi')">escolher arquivo</div>
+                <div name="config-input-file" class="estilo-botao-padrao" id="estilo-especifico" onclick="document.getElementById('arquivo').click(), eventoFile()" onkeyup="alert('oi')">escolher arquivo</div>
             </div>
             <div class="estilo-div-padrao" id="estilo-div-especifico2">
                 <div id="estilo-div">
@@ -69,7 +77,27 @@
                         <div id="display-block-botao">
                             <span id="display-botao">
                                 <div class="estilo-botao-padrao estilo-botao-padrao2" id="evento-cancelar" onclick="eventoCancelar()">cancelar</div>
-                                <button name="enviar" class="estilo-botao-padrao estilo-botao-padrao2" id="evento-enviar">enviar
+                                <button type="submit" class="estilo-botao-padrao estilo-botao-padrao2" id="evento-enviar">enviar
+                                    <?php
+                                        if(isset($_FILES['config-input-file'])){
+                                            $local = "../resources/" .$_FILES['config-input-file']['name'];
+                                            if(move_uploaded_file($_FILES['config-input-file']['tmp_name'],$local)){
+                                                $nome = $_POST['nome'];
+                                                $telefone = $_POST['telefone'];
+                                                $sobre = $_POST['sobre'];
+                                                $img = $_FILES['config-input-file']['name'];
+                                                $con = new mysqli('127.0.0.1:3306','root','','bd_profile');
+                                                $inserir = "INSERT INTO dados_perfil VALUES(DEFAULT, '$nome','$telefone','$sobre','$img')";
+                                                if($con -> query($inserir)){
+                                                    print "
+                                                    <html>
+                                                        <script>window.location = '../classphp/index.php'</script>
+                                                    </html>
+                                                    ";
+                                                }
+                                            }
+                                        }
+                                    ?>
                             </span>
                         </div>
                         <div id="config-carregamento"></div>
