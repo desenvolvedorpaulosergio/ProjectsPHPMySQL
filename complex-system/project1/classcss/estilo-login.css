@@ -1,0 +1,37 @@
+body{
+    min-height: 100dvh;
+    overflow-x: hidden;
+    width: 100dvw;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+#estilo-container{
+    box-shadow: -8px 8px 0px #e1e1e1;
+    border-radius: 20px;
+    background: red;
+    margin: 0px 10px;
+    overflow: hidden;
+    width: 1000px;
+    height: 500px;
+    
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.estilo-padrao-container{
+    width: 50%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+#estilo-especifico2{
+    background: black;
+}
+
+#estilo-icon{
+    background: white;
+    width: 200px;
+}
