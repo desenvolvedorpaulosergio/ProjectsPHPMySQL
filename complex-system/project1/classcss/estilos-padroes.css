@@ -20,3 +20,30 @@
 .estilo-titulo-padrao{
     font: normal bold 60px 'font-titulo';
 }
+
+.estilo-icones{
+    font-size: 50px;
+}
+
+.estilo-padrao-input{
+    border: none;
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+    font: normal normal 30px arial;
+}
+
+.estilo-botao-padrao{
+    font: normal normal 20px 'font-titulo';
+    background: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 100ms;
+    border-radius: 8px;
+}
+
+.estilo-botao-padrao:active{
+    transform: scale(0.95);
+}

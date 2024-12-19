@@ -42,5 +42,21 @@ body{
 
 #config-container{
     padding: 10px;
-    border: 1px solid blueviolet;
+}
+
+#estilo-mensagem{
+    font: normal normal 20px arial;
+    margin-bottom: 10px;
+}
+
+#config-espaço{
+    margin: 25px 0px;
+}
+
+#estilo-mensagem > a{
+    color: black;
+}
+
+#estilo-botao1{
+    width: 100%;
 }
