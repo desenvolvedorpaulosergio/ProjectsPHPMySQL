@@ -1,7 +1,22 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'font-titulo';
+    src: url(../resources/fonts/font-open-sans.ttf);
+}
+
 *{
     padding: 0;
     margin: 0;
 }
 
+.config-label-padrao{
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.estilo-titulo-padrao{
+    font: normal bold 50px 'font-titulo';
+}
