@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'font-titulo';
-    src: url(../resources/fonts/font-open-sans.ttf);
+    src: url(../resources/fonts/font-titulo.ttf);
 }
 
 *{
@@ -18,5 +18,5 @@
 }
 
 .estilo-titulo-padrao{
-    font: normal bold 50px 'font-titulo';
+    font: normal bold 60px 'font-titulo';
 }
