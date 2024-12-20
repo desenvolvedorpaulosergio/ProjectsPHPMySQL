@@ -54,6 +54,11 @@ body{
     margin-bottom: 10px;
 }
 
+#estilo-mensagem-error{
+    font: normal normal 20px arial;
+    margin-bottom: 10px;
+}
+
 #config-espaço{
     margin: 25px 0px;
 }

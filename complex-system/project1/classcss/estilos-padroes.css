@@ -49,6 +49,7 @@
 }
 
 #display-container-mensagem{
+    display: none;
     background: white;
     position: absolute;
     left: 0;

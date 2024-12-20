@@ -27,6 +27,8 @@
                     </div>
                         <div id="estilo-mensagem">esqueceu de algo? <a href="#">cadastre-se</a>!</div> <br>
                         <button class="estilo-botao-padrao" id="estilo-botao1">entrar</button>
+                        <br> <br>
+                        <!-- <div id="estilo-mensagem-error">usuário ou senha incorretos!!!</div> -->
                 </div>
             </form>
             <div class="estilo-padrao-container" id="estilo-especifico2">
