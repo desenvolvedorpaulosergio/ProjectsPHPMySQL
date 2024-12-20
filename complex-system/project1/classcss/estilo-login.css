@@ -14,7 +14,7 @@ body{
     margin: 0px 10px;
     overflow: hidden;
     width: 1000px;
-    height: 500px;
+    height: 450px;
     
     display: flex;
     flex-flow: row nowrap;
@@ -34,7 +34,7 @@ body{
 }
 
 #estilo-icon{
-    width: 80%;
+    width: 710%;
     border-radius: 100%;
     background: white;
     border: 2px solid black;
