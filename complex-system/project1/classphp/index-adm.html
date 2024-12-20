@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../classcss/estilo-login.css">
     <script src="../classjs/index-padrao.js"></script>
 </head>
-<body>
+<body onresize="tamanhoBody()">
     <div id="config-display-form">
         <div id="estilo-container">
             <form method="post" autocomplete="on" class="estilo-padrao-container" id="estilo-especifico1">
@@ -34,10 +34,12 @@
             </div>
         </div>
     </div>
-    <div class="display-container-carregamento">
-        <div class="container-carregamento">
-            <div class="carregamento"></div>
+
+    <div id="display-container-mensagem">
+        <div class="container-mensagem mensagem-sistema">
+            É nessário usar tela cheia para usar o sistema!!!
         </div>
     </div>
+
 </body>
 </html>

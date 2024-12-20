@@ -48,15 +48,14 @@
     transform: scale(0.95);
 }
 
-.display-container-carregamento{
+#display-container-mensagem{
+    background: white;
     position: absolute;
-    display: block;
-    margin: 0;
+    left: 0;
     top: 0;
 }
 
-.container-carregamento{
-    background: white;
+.container-mensagem{
     height: 100dvh;
     width: 100dvw;
     display: flex;
@@ -65,17 +64,8 @@
     justify-content: center;
 }
 
-@keyframes carregamento {
-    to{
-        rotate: 360deg;
-    }
-}
-
-.carregamento{
-    width: 80px;
-    height: 80px;
-    border-radius: 100%;
-    border: 10px solid #e1e1e1;
-    border-top: 10px solid black;
-    animation: carregamento 1s linear infinite;
+.mensagem-sistema{
+    font: normal normal 30px 'font-titulo';
+    text-align: center;
+    margin: 0px 10px;
 }

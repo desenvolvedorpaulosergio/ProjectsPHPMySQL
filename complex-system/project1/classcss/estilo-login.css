@@ -13,11 +13,16 @@ body{
     border-radius: 20px;
     margin: 0px 10px;
     overflow: hidden;
-    width: 1000px;
-    height: 450px;
-    
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
+}
+
+#config-display-form{
+    display: block;
+    width: 1000px;
+    height: 450px;
 }
 
 .estilo-padrao-container{
@@ -62,5 +67,5 @@ body{
 }
 
 #config-display-form{
-    display: none;
+    display: block;
 }
