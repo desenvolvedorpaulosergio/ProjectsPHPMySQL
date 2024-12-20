@@ -12,7 +12,7 @@
 <body onresize="tamanhoBody()">
     <div id="config-display-form">
         <div id="estilo-container">
-            <form method="post" autocomplete="on" class="estilo-padrao-container" id="estilo-especifico1">
+            <form method="post" autocomplete="off" class="estilo-padrao-container" id="estilo-especifico1">
                 <div id="config-container">
                     <h1 class="estilo-titulo-padrao">Logon</h1>
                     <div id="config-espaço">
