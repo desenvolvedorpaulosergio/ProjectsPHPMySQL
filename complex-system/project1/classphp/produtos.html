@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sala de estoque</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    <link rel="stylesheet" href="../classcss/estilos-padroes.css">
+    <link rel="stylesheet" href="../classcss/estilo-produtos.css">
+    <script src="../classjs/index-padrao.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="estilo-navegador">
+            <h1>Estoques</h1>
+            <a href="#">produtos</a>
+            <a href="#"><ins>estoques</ins></a>
+            <a href="#">clientes</a>
+            <a href="#">relatórios</a>
+            <a href="#">
+                <span class="material-symbols-outlined">settings</span>
+            </a>
+        </nav>
+    </header>
+
+    <div class="config-display">
+        <div class="config-display-flex">
+            <div class="config-display-botoes">
+                <button class="estilo-botao-padrao comprimento-padrao"><small><ins>cadastrar</ins></small></button>
+                <button class="estilo-botao-padrao comprimento-padrao"><small>excluir</small></button>
+                <button class="estilo-botao-padrao comprimento-padrao"><small>alterar</small></button>
+            </div>
+            <form class="config-container-display-flex" enctype="multipart/form-data" method="post">
+                <div class="estilo-div-form">
+                    <div class="estilo-container-padrao">
+                        <label for="nome-produto" class="config-label-padrao config-margin config-comprimento1">
+                            <span class="material-symbols-outlined estilo-icones">shopping_bag</span>
+                            <input type="text" name="nome-produto" id="nome-produto" class="estilo-padrao-input evento-input" placeholder="nome do produto" required>
+                        </label>
+                        <br>
+                        <div class="config-display-inputs-inline">
+                            <label for="quantidade" class="config-label-padrao config-margin config-comprimento2">
+                                <span class="material-symbols-outlined estilo-icones">shopping_bag</span>
+                                <input type="text" name="quantidade" id="quantidade" class="estilo-padrao-input evento-input" placeholder="quantidade" required>
+                            </label>
+                            <label for="categoria" class="config-label-padrao config-margin config-comprimento2">
+                                <span class="material-symbols-outlined estilo-icones">shopping_bag</span>
+                                <input type="text" name="categoria" id="categoria" class="estilo-padrao-input evento-input" placeholder="categoria" required list="lista">
+                                <datalist id="lista">
+                                    <option value="Eletrônicos">Eletrônicos</option>
+                                    <option value="Eletrodomésticos">Eletrodomésticos</option>
+                                    <option value="Móveis">Móveis</option>
+                                    <option value="Roupas">Roupas</option>
+                                    <option value="Alimentos">Alimentos</option>
+                                    <option value="Livros">Livros</option>
+                                    <option value="Beleza">Beleza</option>
+                                    <option value="Ferramentas">Ferramentas</option>
+                                    <option value="Esportes">Esportes</option>
+                                    <option value="Brinquedos">Brinquedos</option>
+                                    <option value="Bebidas">Bebidas</option>
+                                </datalist>
+                            </label>
+                        </div>
+                        <br>
+                        <div class="config-display-inputs-inline">
+                            <label for="preço-custo" class="config-label-padrao config-margin config-comprimento2">
+                                <span class="material-symbols-outlined estilo-icones">paid</span>
+                                <input type="number" name="preco-custo" id="preco-custo" class="estilo-padrao-input evento-input" placeholder="preço custo" required step="0.5">
+                            </label>
+                            <label for="preco-venda" class="config-label-padrao config-margin config-comprimento2">
+                                <span class="material-symbols-outlined estilo-icones">paid</span>
+                                <input type="number" name="preco-venda" id="preco-venda" class="estilo-padrao-input evento-input" placeholder="preço venda" required step="0.5">
+                            </label>
+                        </div>
+                        <br>
+                        <label for="validade" class="config-label-padrao config-margin config-comprimento1">
+                            <span class="material-symbols-outlined estilo-icones">shopping_bag</span>
+                            <input type="text" name="validade" id="validade" class="estilo-padrao-input evento-input" placeholder="validade: dd/mm/aaaa" required>
+                        </label>
+                    </div>
+                    <div class="estilo-container-padrao">
+                        <input type="file" class="evento-input" name="" id="input-file" style="display: none;" accept=".jpg, .jpeg, .png">
+                        <div class="estilo-botao-padrao evento-input" id="config-button-div" onclick="document.getElementById('input-file').click()">
+                            <span class="material-symbols-outlined">photo_camera</span>
+                        </div>
+                        <br> <br>
+                        <label for="observacao" class="config-label-padrao config-margin config-comprimento1">
+                            <span class="material-symbols-outlined estilo-icones">warning</span>
+                            <input type="text" name="observacao" id="observacao" class="estilo-padrao-input evento-input" placeholder="observação" required value="estoque cheio" readonly>
+                        </label>
+                    </div>
+                </div>
+                <div name="verificar" class="estilo-botao-padrao" id="config-comprimento3" onclick="eventoVerificar()">verificar</div>
+                <div class="display-block-none">
+                    <div class="display-inline">
+                        <button name="visualizar" class="estilo-botao-padrao config-comprimento2">cadastrar</button>
+                        <div name="visualizar" class="estilo-botao-padrao config-comprimento2" onclick="eventoCancelar()">cancelar</div>
+                        <div name="visualizar" class="estilo-botao-padrao config-comprimento2" onclick="visualizarTabela()">visualizar</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="config-display-modal-erro">
+        <div class="config-modal-erro">
+            <div class="modal-erro">
+                <span class="material-symbols-outlined estilo-icones">warning</span>
+                <div class="estilo-mensagem">
+                    preencha os dados corretamente!!!
+                </div>
+                <button class="estilo-botao-padrao" onclick="eventoClose()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="display-container-tabela">
+        <div class="container-tabela"> 
+            <div class="tabela">
+                <table class="config-table">
+                    <tr>
+                        <th scope="rowgroup">cod</th>
+                        <th scope="rowgroup">nome</th>
+                        <th scope="rowgroup">quantidade</th>
+                        <th scope="rowgroup">categoria</th>
+                        <th scope="rowgroup">pr. custo uni</th>
+                        <th scope="rowgroup">pr. venda uni</th>
+                        <th scope="rowgroup">validade</th>
+                        <th scope="rowgroup">observação</th>
+                        <th scope="rowgroup">img</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                </table>
+            </div>
+            <button class="estilo-padrao-botao2 config-botao2" onclick="eventoFechar()">X</button>
+        </div>
+    </div>
+
+    <!-- <div id="display-container-mensagem">
+        <div class="container-mensagem mensagem-sistema">
+            É nessário usar tela cheia para usar o sistema!!!
+        </div>
+    </div> -->
+</body>
+</html>

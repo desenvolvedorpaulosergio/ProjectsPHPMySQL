@@ -1,0 +1,25 @@
+body{
+    width: 100dvw;
+    display: flex;
+    min-height: 100dvh;
+    flex-flow: column nowrap;
+    overflow-y: auto;
+}
+
+#config-button-div{
+    text-align: center;
+    width: 70%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#config-button-div > span{
+    font-size: 100px;
+}
+
+#config-comprimento3{
+    text-align: center;
+    width: 75%;
+}
