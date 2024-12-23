@@ -88,20 +88,31 @@ function visualizarTabela(){
     })
 }
 
-// function eventoCadastrar(){
-//     window.document.getElementById('formulario-insert').style.display = 'block'
-//     window.document.getElementById('formulario-excluir').style.display = 'none'
-//     window.document.getElementById('formulario-atualizar').style.display = 'none'
-// }
+window.document.addEventListener('DOMContentLoaded', function(){
+    window.document.getElementById('botao-cadastrar').style.textDecoration = 'underline'
+})
 
-// function eventoExcluir(){
-//     window.document.getElementById('formulario-insert').style.display = 'none'
-//     window.document.getElementById('formulario-excluir').style.display = 'block'
-//     window.document.getElementById('formulario-atualizar').style.display = 'none'
-// }
+function eventoCadastrar(){
+    window.location = '../classphp/produtos.html'
+}
 
-// function eventoAlterar(){
-//     window.document.getElementById('formulario-insert').style.display = 'none'
-//     window.document.getElementById('formulario-excluir').style.display = 'none'
-//     window.document.getElementById('formulario-atualizar').style.display = 'block'
-// }
+function eventoExcluir(){
+    window.document.getElementById('formulario-insert').style.display = 'none'
+    window.document.getElementById('formulario-excluir').style.display = 'block'
+    window.document.getElementById('config-display-formulario-atualizar').style.display = 'none'
+
+    window.document.getElementById('botao-cadastrar').style.textDecoration = 'none'
+    window.document.getElementById('botao-excluir').style.textDecoration = 'underline'
+    window.document.getElementById('botao-alterar').style.textDecoration = 'none'
+}
+
+function eventoAlterar(){
+    window.document.getElementById('formulario-insert').style.display = 'none'
+    window.document.getElementById('formulario-excluir').style.display = 'none'
+    window.document.getElementById('config-display-formulario-atualizar').style.display = 'block'
+
+    window.document.getElementById('botao-cadastrar').style.textDecoration = 'none'
+    window.document.getElementById('botao-excluir').style.textDecoration = 'none'
+    window.document.getElementById('botao-alterar').style.textDecoration = 'underline'
+
+}
