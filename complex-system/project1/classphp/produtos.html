@@ -26,11 +26,11 @@
     <div class="config-display">
         <div class="config-display-flex">
             <div class="config-display-botoes">
-                <button class="estilo-botao-padrao comprimento-padrao"><small><ins>cadastrar</ins></small></button>
-                <button class="estilo-botao-padrao comprimento-padrao"><small>excluir</small></button>
-                <button class="estilo-botao-padrao comprimento-padrao"><small>alterar</small></button>
+                <button class="estilo-botao-padrao comprimento-padrao" onclick="eventoCadastrar()"><small><ins>cadastrar</ins></small></button>
+                <button class="estilo-botao-padrao comprimento-padrao" onclick="eventoExcluir()"><small>excluir</small></button>
+                <button class="estilo-botao-padrao comprimento-padrao" onclick="eventoAlterar()"><small>alterar</small></button>
             </div>
-            <form class="config-container-display-flex" enctype="multipart/form-data" method="post">
+            <form class="config-container-display-flex" id="formulario-insert" enctype="multipart/form-data" method="post">
                 <div class="estilo-div-form">
                     <div class="estilo-container-padrao">
                         <label for="nome-produto" class="config-label-padrao config-margin config-comprimento1">
@@ -90,13 +90,104 @@
                         </label>
                     </div>
                 </div>
-                <div name="verificar" class="estilo-botao-padrao" id="config-comprimento3" onclick="eventoVerificar()">verificar</div>
+                <div id="elemento-div">
+                    <div name="verificar" class="estilo-botao-padrao" id="config-comprimento3" onclick="eventoVerificar()">verificar</div>
+                    <div name="visualizar" class="estilo-botao-padrao config-comprimento2 elemento-botau" id="config-comprimento3" onclick="visualizarTabela()">visualizar</div>
+                </div>
                 <div class="display-block-none">
                     <div class="display-inline">
                         <button name="visualizar" class="estilo-botao-padrao config-comprimento2">cadastrar</button>
                         <div name="visualizar" class="estilo-botao-padrao config-comprimento2" onclick="eventoCancelar()">cancelar</div>
                         <div name="visualizar" class="estilo-botao-padrao config-comprimento2" onclick="visualizarTabela()">visualizar</div>
                     </div>
+                </div>
+            </form>
+            <form class="config-container-display-flex" id="formulario-excluir" enctype="multipart/form-data" method="post">
+                <div class="organizacao-elemento-pesquisa">
+                    <label for="observacao" class="config-label-padrao">
+                        <input type="text" name="id_produto" id="id_produto" class="estilo-padrao-input config-comprimento1" placeholder="código do produto..." required>
+                    </label>
+                    <button class="estilo-botao-padrao config-comprimento4">excluir</button>
+                    <div class="estilo-botao-padrao config-comprimento4" onclick="visualizarTabela()">visualizar</div>
+                </div> <br>
+                <div class="config-tabela">
+                    <table class="config-table">
+                        <tr>
+                            <th scope="rowgroup">cod</th>
+                            <th scope="rowgroup">nome</th>
+                            <th scope="rowgroup">quantidade</th>
+                            <th scope="rowgroup">categoria</th>
+                            <th scope="rowgroup">pr. custo uni</th>
+                            <th scope="rowgroup">pr. venda uni</th>
+                            <th scope="rowgroup">validade</th>
+                            <th scope="rowgroup">observação</th>
+                            <th scope="rowgroup">img</th>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+            <form class="config-container-display-flex" id="formulario-atualizar" enctype="multipart/form-data" method="post">
+                <div class="organizacao-elemento-pesquisa">
+                    <label for="observacao" class="config-label-padrao">
+                        <input type="number" name="id_produto" id="id_produto" class="estilo-padrao-input config-comprimento1" placeholder="código do produto..." required>
+                    </label>
+                    <button class="estilo-botao-padrao config-comprimento4">procurar</button>
+                    <button class="estilo-botao-padrao config-comprimento4">alterar</button>
+                    <div class="estilo-botao-padrao config-comprimento4" onclick="visualizarTabela()">visualizar</div>
+                </div> <br>
+                <div class="config-tabela config-tabela2">
+                    <table class="config-table">
+                        <tr>
+                            <th scope="rowgroup">cod</th>
+                            <th scope="rowgroup">nome</th>
+                            <th scope="rowgroup">quantidade</th>
+                            <th scope="rowgroup">categoria</th>
+                            <th scope="rowgroup">pr. custo uni</th>
+                            <th scope="rowgroup">pr. venda uni</th>
+                            <th scope="rowgroup">validade</th>
+                            <th scope="rowgroup">observação</th>
+                            <th scope="rowgroup">img</th>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="config-especifico">
+                    <label for="nome-produto" class="config-label-padrao">
+                        <span class="material-symbols-outlined estilo-icones estilo-icones2">shopping_bag</span>
+                        <input type="text" name="nome-produto" id="nome-produto" class="estilo-padrao-input" placeholder="nome do produto" required value="">
+                    </label>
+                    <label for="quantidade" class="config-label-padrao">
+                        <span class="material-symbols-outlined estilo-icones estilo-icones2">shopping_bag</span>
+                        <input type="number" name="quantidade" id="quantidade" class="estilo-padrao-input estilo-padrao-input2" placeholder="quantidade" required step="0.5" value="">
+                    </label>
+                    <label for="categoria" class="config-label-padrao">
+                        <span class="material-symbols-outlined estilo-icones estilo-icones2">shopping_bag</span>
+                        <input type="text" name="categoria" id="categoria" class="estilo-padrao-input estilo-padrao-input2" placeholder="categoria" required step="0.5" value="" list="lista">
+                    </label>
+                    <label for="preco_custo" class="config-label-padrao">
+                        <span class="material-symbols-outlined estilo-icones estilo-icones2">paid</span>
+                        <input type="number" name="preco_custo" id="preco_custo" class="estilo-padrao-input estilo-padrao-input2" placeholder="preço custo" required step="0.5" value="">
+                    </label>
+                </div>
+                <div id="config-especifico">
+                    <label for="preco_venda" class="config-label-padrao">
+                        <span class="material-symbols-outlined estilo-icones estilo-icones2">paid</span>
+                        <input type="number" name="preco_venda" id="preco_venda" class="estilo-padrao-input estilo-padrao-input2" placeholder="preço venda" required step="0.5" value="">
+                    </label>
+                    <label for="validade" class="config-label-padrao">
+                        <span class="material-symbols-outlined estilo-icones estilo-icones2">shopping_bag</span>
+                        <input type="text" name="validade" id="validade" class="estilo-padrao-input estilo-padrao-input2" placeholder="validade" required value="">
+                    </label>
+                    <label for="observacao" class="config-label-padrao">
+                        <span class="material-symbols-outlined estilo-icones estilo-icones2">warning</span>
+                        <input type="text" name="observacao" id="observacao" class="estilo-padrao-input" placeholder="observação" required step="0.5" value="">
+                    </label>
+                    <input type="file" class="evento-input" name="" id="input-file" style="display: none;" accept=".jpg, .jpeg, .png" value="">
+                    <label for="observacao" class="config-label-padrao">
+                        <div class="estilo-botao-padrao config-comprimento4" style="padding: 0;" onclick="document.getElementById('input-file').click()">
+                        <span class="material-symbols-outlined estilo-icones estilo-icones2 estilo-icones3">photo_camera</span>
+                        </div>
+                    </label>
                 </div>
             </form>
         </div>
@@ -130,42 +221,12 @@
                         <th scope="rowgroup">observação</th>
                         <th scope="rowgroup">img</th>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td>...</td>
-                    </tr>
                 </table>
             </div>
-            <button class="estilo-padrao-botao2 config-botao2" onclick="eventoFechar()">X</button>
+            <div class="alinhamento-display">                
+                <span class="material-symbols-outlined config-botao4" onclick="window.print()">print</span>
+                <button class="estilo-padrao-botao2 config-botao2" onclick="eventoFechar()">X</button>
+            </div>
         </div>
     </div>
 

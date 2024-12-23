@@ -29,6 +29,11 @@ function eventoVerificar(){
     const data_RegEx = /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/
     if(!(produto != "" && produto.length >= 3 && quantidade != "" && categoria != "" && precoCusto != "" && precoVenda != "" && data_RegEx.test(validade) == true && icon != "" && precoVenda > precoCusto)){
         document.getElementById('config-comprimento3').style.display = 'none'
+
+        document.querySelectorAll('.elemento-botau').forEach(function(elementos){
+            elementos.style.display = 'none'
+        })
+
         document.querySelectorAll('display-block-none').forEach(function(elementos){
             elementos.style.display = 'block'
         })
@@ -56,6 +61,11 @@ function eventoCancelar(){
     document.querySelectorAll('display-block-none').forEach(function(elementos){
         elementos.style.display = 'none'
     })
+
+    document.querySelectorAll('.elemento-botau').forEach(function(elementos){
+        elementos.style.display = 'block'
+    })
+
 }
 
 function eventoClose(){
@@ -77,3 +87,21 @@ function visualizarTabela(){
         elementos.style.display = 'block'
     })
 }
+
+// function eventoCadastrar(){
+//     window.document.getElementById('formulario-insert').style.display = 'block'
+//     window.document.getElementById('formulario-excluir').style.display = 'none'
+//     window.document.getElementById('formulario-atualizar').style.display = 'none'
+// }
+
+// function eventoExcluir(){
+//     window.document.getElementById('formulario-insert').style.display = 'none'
+//     window.document.getElementById('formulario-excluir').style.display = 'block'
+//     window.document.getElementById('formulario-atualizar').style.display = 'none'
+// }
+
+// function eventoAlterar(){
+//     window.document.getElementById('formulario-insert').style.display = 'none'
+//     window.document.getElementById('formulario-excluir').style.display = 'none'
+//     window.document.getElementById('formulario-atualizar').style.display = 'block'
+// }

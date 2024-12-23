@@ -92,7 +92,7 @@ body{
 }
 
 
-.estilo-botao-padrao:active, .config-botao2:active{
+.estilo-botao-padrao:active, .config-botao2:active, #estilo-especifico:active, .config-botao4:active{
     transform: scale(0.95);
 }
 
@@ -300,9 +300,15 @@ body{
     height: 40px;
     width: 40px;
     cursor: pointer;
-    margin-left: auto;
-    margin-right: 70px;
+}
 
+.config-botao4{
+    border-radius: 100%;
+    background: black;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    margin: 0;
 }
 
 .config-table{
@@ -318,9 +324,10 @@ th, td{
 }
 
 th{
-    font: normal normal 20px 'fonte-titulo';
+    font: normal normal 18px 'fonte-titulo';
     border: 1px solid black;
-    background: #191919;
+    background: red url(../resources/fundo.png) center center no-repeat;
+    background-size: cover;
     padding: 20px 0px;
     position: sticky;
     color: white;
@@ -335,7 +342,11 @@ td{
     font: normal normal 15px 'arial';
     border: 1px solid black;
     text-align: center;
-    padding: 10px 0px;
+    padding: 5px 0px;
+}
+
+tr:hover{
+    background: #00000037;
 }
 
 /* configuração de responsividade de tela  */
@@ -357,4 +368,77 @@ td{
     header{
         display: none;
     }
+}
+
+.alinhamento-display{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    gap: 20px;
+}
+
+#estilo-especifico{
+    font-size: 20px;
+    border-radius: 9000px;
+    color: white;
+    padding: 10px;
+    border: none;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+#formulario-excluir, #formulario-atualizar{
+    display: none;
+}
+
+
+.organizacao-elemento-pesquisa{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#id_produto{
+    width: 280px;
+}
+
+.config-comprimento4{
+    text-align: center;
+    width: 150px;
+}
+
+.config-tabela{
+    width: 90%;
+    height: 350px;
+    /* background: red; */
+    border: 1px solid #00000076;
+    overflow-y: auto;
+}
+
+.config-tabela2{
+    height: 200px;
+}
+
+.config-tabela::-webkit-scrollbar{
+    display: none;
+}
+
+/* configurações de inputs parte 2 */
+
+.estilo-padrao-input{
+    font-size: 20px;
+}
+
+.estilo-icones2{
+    font-size: 40px;
+}
+
+.estilo-padrao-input2{
+    width: 140px;
 }
