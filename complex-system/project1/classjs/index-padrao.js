@@ -27,7 +27,7 @@ function eventoVerificar(){
     let validade = document.getElementById('validade').value
     let icon = document.getElementById('input-file').value
     const data_RegEx = /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/
-    if(!(produto != "" && produto.length >= 3 && quantidade != "" && categoria != "" && precoCusto != "" && precoVenda != "" && data_RegEx.test(validade) == true && icon != "" && precoVenda > precoCusto)){
+    if(produto != "" && produto.length >= 3 && quantidade != "" && categoria != "" && precoCusto != "" && precoVenda != "" && data_RegEx.test(validade) == true && icon != "" && precoVenda > precoCusto){
         document.getElementById('config-comprimento3').style.display = 'none'
 
         document.querySelectorAll('.elemento-botau').forEach(function(elementos){
@@ -89,11 +89,11 @@ function visualizarTabela(){
 }
 
 window.document.addEventListener('DOMContentLoaded', function(){
-    window.document.getElementById('botao-cadastrar').style.textDecoration = 'underline'
 })
 
 function eventoCadastrar(){
-    window.location = '../classphp/produtos.html'
+    window.document.getElementById('botao-cadastrar').style.textDecoration = 'underline'
+    window.location = '../classphp/produtos.php'
 }
 
 function eventoExcluir(){

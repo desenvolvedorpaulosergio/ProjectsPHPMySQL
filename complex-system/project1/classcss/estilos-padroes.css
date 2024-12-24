@@ -337,12 +337,6 @@ body{
     width: 100%;
 }
 
-th, td{
-    overflow: hidden;
-    word-wrap: nowrap;
-    text-overflow: ellipsis;
-}
-
 th{
     font: normal normal 18px 'fonte-titulo';
     border: 1px solid black;
@@ -366,6 +360,13 @@ td{
 
 tr:hover{
     background: #00000037;
+}
+
+th, td{
+    overflow: hidden;
+    word-wrap: nowrap;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 /* configuração de responsividade de tela  */
@@ -419,7 +420,7 @@ tr:hover{
     gap: 10px;
 }
 
-#id_produto{
+#id_produto, #id_produto2{
     width: 280px;
 }
 
@@ -456,4 +457,8 @@ tr:hover{
 
 .estilo-padrao-input2{
     width: 140px;
+}
+
+#botao-alterar{
+    display: none;
 }
