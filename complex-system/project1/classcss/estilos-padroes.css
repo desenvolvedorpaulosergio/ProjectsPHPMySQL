@@ -1,110 +1,79 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'font-titulo';
+    font-family: 'fonte-titulo';
     src: url(../resources/fonts/font-titulo.ttf);
 }
 
-body{
-    overflow-x: hidden;
-}
-
-*{
-    padding: 0;
-    margin: 0;
-}
-
-/* estilo-input-formulario */
-
-.config-label-padrao{
-    display: flex;
-    align-items: center;
-    flex-flow: row nowrap;
-    justify-content: center;
-}
-
-.config-margin{
-    margin: auto;
-}
+/* configurações padrões de input */
 
 .estilo-titulo-padrao{
-    font: normal bold 60px 'font-titulo';
+    font: normal bold 60px 'fonte-titulo';
+    color: black;
 }
 
-.estilo-icones{
-    font-size: 50px;
-}
-
-.estilo-padrao-input{
-    border: none;
-    width: 100%;
-    padding-bottom: 5px;
-    border-bottom: 2px solid black;
-    font: normal normal 30px arial;
-}
-
-.config-comprimento1{
-    width: 75%;
-    margin: 0;
-}
-
-.config-comprimento2{
-    width: 50%;
-    text-align: center;
-}
-
-.config-display-inputs-inline{
-    width: 75%;
+.estilo-padrao-inputs{
+    margin: 20px 0px;
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
 }
 
-.config-display-inputs-inline > label > input, .estilo-container-padrao > label> input{
-    font-size: 22px;
+.estilo-input-padrao{
+    margin: -20px 0px 0px 0px;
+    padding: 10px 0px; 
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid black;
+    font: normal normal 30px "arial";
 }
 
-/* estilo de botões padrões */
+.material-symbols-outlined{
+    font-size: 60px;
+}
+
+/* configurações padrões de mensagem/aviso*/
+
+.mensagem, .mensagem > a{
+    font: normal normal 20px "arial";
+    color: black;
+}
+
+.mensagem > a:hover{
+    color: grey;
+}
+
+/* configurações padrões de botões */
 
 .estilo-botao-padrao{
-    font: normal normal 20px 'font-titulo';
+    font: normal normal 20px "arial";
     background: black;
-    color: white;
-    padding: 10px;
-    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 200ms;
     cursor: pointer;
-    transition: 100ms;
-    border-radius: 8px;
+    color: white;
+    border: none;
 }
 
-.comprimento-padrao{
-    width: 120px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    padding: 2px 8px;
-    margin: 0px 5px;
-}
-
-.config-display-botoes{
-    width: 90%;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 40px;
-}
-
-
-.estilo-botao-padrao:active, .config-botao2:active, #estilo-especifico:active, .config-botao4:active{
+.estilo-botao-padrao:active{
     transform: scale(0.95);
 }
 
-#display-container-mensagem{
-    display: none;
-    background: white;
+.config-comprimento-tipo1{
+    width: 100%;
+}
+
+/* configurações do modal de erro */
+
+#config-display-mensagem-erro{
     position: absolute;
+    display: block;
     left: 0;
     top: 0;
 }
 
-.container-mensagem{
+.config-mensagem-erro{
     height: 100dvh;
     width: 100dvw;
     display: flex;
@@ -113,352 +82,24 @@ body{
     justify-content: center;
 }
 
-.mensagem-sistema{
-    font: normal normal 30px 'font-titulo';
-    text-align: center;
-    margin: 0px 10px;
-}
-
-/* estilo padrão de navegador header */
-
-.estilo-navegador{
-    background: black;
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    flex-flow: row nowrap;
-}
-
-.estilo-navegador > h1{
-    font: normal bold 30px 'font-titulo';
-    margin-right: auto;
-    cursor: pointer;
-    color: white;
-}
-
-.estilo-navegador > a{
-    font: normal normal 18px 'arial';
-    text-decoration: none;
-    border-radius: 5px;
-    color: white;
-    padding: 10px;
-}
-
-.estilo-navegador > a:hover{
-    text-decoration: underline;
-}
-
-.estilo-navegador > a:last-child{
-    margin-left: auto;
-}
-
-/* configuracoes de container principal: main*/
-
-.config-display{
-    display: block;
-    height: 450px;
-    flex: auto;
-}
-
-#config-display-cadastro{
-    display: block;
-    width: 90%;
-}
-
-#formulario-excluir, #config-display-formulario-atualizar{
-    display: none;
-}
-
-#config-display-formulario-atualizar, #formulario-excluir{
-    width: 90%;
-}
-
-#formulario-atualizar{
-    margin: auto;
-    justify-content: center;
-    display: flex;
-    width: 100%;
-}
-
-.config-container-display-flex{
-    box-shadow: 8px 8px 0px #e1e1e1;
-    border-radius: 20px;
-    margin: 0px 10px;
-    overflow: hidden;
-    width: 100%;
-    height: 450px;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.estilo-div-form{
-    display: flex;
-    flex-flow: row nowrap;
-    width: 100%;
-    height: 80%;
-}
-
-.config-display-flex{
-    margin-top: 10px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.estilo-container-padrao{
-    padding: 5px;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-flow: column nowrap;
-    justify-content: center;
-}
-
-/* modal de erro */
-
-.config-display-modal-erro{
-    position: absolute;
-    display: none;
-    left: 0;
-    top: 0;
-}
-
-.config-modal-erro{
-    background: white;
-    height: 100dvh;
-    width: 100dvw;
-    display: flex;
-    align-items: center;
-    flex-flow: row nowrap;
-    justify-content: center;
-}
-
-.modal-erro{
-    box-shadow: 0px 5px #e1e1e1;
-    border-radius: 20px;
-    height: 220px;
+.mensagem-erro{
     width: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column nowrap;
-}
-
-.modal-erro > button{
-    width: 100px;
-}
-
-.estilo-mensagem{
-    text-align: center;
-    background: black;
-    width: 100%;
-    padding: 20px 10px;
-    color: white;
-    margin: 10px 0px;
-    font: normal normal 20px 'arial';
-}
-
-.display-inline{
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.display-block-none{
-    width: 85%;
-}
-
-/* configurações padrões de tablea */
-
-.display-container-tabela{
-    position: absolute;
-    display: none;
-    left: 0;
-    top: 0;
-}
-
-.container-tabela{
-    background: white;
-    overflow-y: auto;
-    height: 100dvh;
-    width: 100dvw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column nowrap;
-}
-
-.tabela{
-    width: 90%;
-    height: 80%;
-    overflow: hidden;
-    overflow-y: auto;
-    margin-bottom: 10px;
-}
-
-.tabela::-webkit-scrollbar{
-    display: none;
-}
-
-.estilo-padrao-botao2{
-    background: black;
-}
-
-.config-botao2{
-    font: normal normal 20px arial;
-    border-radius: 9000px;
-    color: white;
-    padding: 10px;
-    border: none;
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-}
-
-.config-botao4{
-    border-radius: 100%;
-    background: black;
-    cursor: pointer;
-    color: white;
-    padding: 10px;
-    margin: 0;
-}
-
-.config-table{
-    border-collapse: collapse;
-    table-layout: fixed;
-    width: 100%;
-}
-
-th{
-    font: normal normal 18px 'fonte-titulo';
-    border: 1px solid black;
-    background: #191919;
-    padding: 20px 0px;
-    position: sticky;
-    color: white;
-    top: 0;
-}
-
-th:first-child, td:first-child{
-    width: 40px;
-}
-
-td{
-    font: normal normal 15px 'arial';
-    border: 1px solid black;
-    text-align: center;
-    padding: 5px 0px;
-}
-
-tr:hover{
-    background: #00000037;
-}
-
-th, td{
-    overflow: hidden;
-    word-wrap: nowrap;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-/* configuração de responsividade de tela  */
-
-@media screen and (max-width: 1000px){
-    #display-container-mensagem{
-        position: fixed;
-        display: block;
-    }
-
-    #config-display-form{
-        display: none;
-    }
-
-    body{
-        overflow-y: hidden;
-    }
-
-    header{
-        display: none;
-    }
-}
-
-.alinhamento-display{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    width: 80%;
-    gap: 20px;
-}
-
-#estilo-especifico{
-    font-size: 20px;
-    border-radius: 9000px;
-    color: white;
-    padding: 10px;
-    border: none;
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-}
-
-
-.organizacao-elemento-pesquisa{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-flow: row nowrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-#id_produto, #id_produto2{
-    width: 280px;
-}
-
-.config-comprimento4{
-    text-align: center;
-    width: 150px;
-}
-
-.config-tabela{
-    width: 90%;
-    height: 350px;
-    /* background: red; */
-    border: 1px solid #00000076;
-    overflow-y: auto;
-}
-
-.config-tabela2{
     height: 200px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 0px #e1e1e1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.config-tabela::-webkit-scrollbar{
-    display: none;
-}
-
-/* configurações de inputs parte 2 */
-
-.estilo-padrao-input{
-    font-size: 20px;
-}
-
-.estilo-icones2{
-    font-size: 40px;
-}
-
-.estilo-padrao-input2{
-    width: 140px;
-}
-
-#botao-alterar{
-    display: none;
+.config-especifico-mensagem{
+    background: black;
+    text-align: center;
+    padding: 20px 0px;
+    margin: 5px 0px;
+    color: white;
+    width: 100%;
 }

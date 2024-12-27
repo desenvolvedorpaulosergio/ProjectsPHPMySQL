@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sistema de categoria complexa: projeto-cadastro</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    <link rel="stylesheet" href="../classcss/estilos-padroes.css">
+    <link rel="stylesheet" href="../classcss/estilo-logon.css">
+    <script src="../classjs/configjs.js"></script>
+</head>
+<body>
+    <div id="config-container-display">
+        <div class="config-container-padrao">
+            <div class="comprimento-padrao" id="config-especifico1">
+                <div id="config-posicao-div">
+                    <h1 class="estilo-titulo-padrao">Logon</h1>
+                    <label for="nome-usuario" class="estilo-padrao-inputs">
+                        <span class="material-symbols-outlined">person</span>
+                        <input type="text" name="nome-usuario" class="estilo-input-padrao" id="nome-usuario" placeholder="nome usuário" required>
+                    </label>
+                    <label for="senha-usuario" class="estilo-padrao-inputs">
+                        <span class="material-symbols-outlined">key</span>
+                        <input type="password" name="senha-usuario" class="estilo-input-padrao" id="senha-usuario" placeholder="senha..." required>
+                    </label>
+                    <p class="mensagem">
+                        esqueceu de algo? <a href="#">contate-nos</a>!
+                    </p>
+                    <br>
+                    <button class="estilo-botao-padrao config-comprimento-tipo1">entrar</button>
+                </div>
+            </div>
+            <div class="comprimento-padrao" id="config-especifico2">
+                <img src="../resources/icon-user.png" alt="icon-user" id="config-icon-user">
+            </div>
+        </div>
+    </div>
+    
+    <div id="config-display-mensagem-erro">
+        <div class="config-mensagem-erro">
+            <div class="mensagem-erro">
+                <span class="material-symbols-outlined">warning</span>
+                <p class="mensagem config-especifico-mensagem">
+                    preencha os dados corretamente!!!
+                </p>
+                <button class="estilo-botao-padrao">OK</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
