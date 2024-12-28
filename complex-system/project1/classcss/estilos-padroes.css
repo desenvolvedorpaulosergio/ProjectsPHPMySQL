@@ -25,11 +25,11 @@
     width: 100%;
     border: none;
     border-bottom: 2px solid black;
-    font: normal normal 30px "arial";
+    font: normal normal 25px "arial";
 }
 
 .material-symbols-outlined{
-    font-size: 60px;
+    font-size: 50px;
 }
 
 /* configurações padrões de mensagem/aviso*/
@@ -111,7 +111,7 @@
 
 /* configurações de responsividade */
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1300px){
     #config-display-mensagem{
         display: block;
     }
@@ -120,11 +120,11 @@
     }
 }
 
-/* @media screen and(orientation: portrait) and(min-width: 1200px){
+@media screen and (max-height: 500px){
     #config-display-mensagem{
         display: block;
     }
     #config-container-display{
         display: none;   
     }
-} */
+}
