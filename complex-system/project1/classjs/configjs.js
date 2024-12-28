@@ -6,3 +6,7 @@ function eventoClose(){
 function eventoCamera(){
     window.document.getElementById('img-produto').click()
 }
+
+function eventoFechamento(){
+    window.document.getElementById('config-display-block-tabela').style.display = "none"
+}
