@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+body{
+    overflow-x: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
 @font-face {
     font-family: 'fonte-titulo';
     src: url(../resources/fonts/font-titulo.ttf);
@@ -10,6 +21,11 @@
 .estilo-titulo-padrao{
     font: normal bold 60px 'fonte-titulo';
     color: black;
+}
+
+.estilo-titulo-padrao2{
+    font: normal bold 35px 'fonte-titulo';
+    color: white;
 }
 
 .estilo-padrao-inputs{
@@ -32,6 +48,13 @@
     font-size: 50px;
 }
 
+.estilo-icon2{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    margin-top: 6px;
+}
+
 /* configurações padrões de mensagem/aviso*/
 
 .mensagem, .mensagem > a{
@@ -45,7 +68,7 @@
 
 /* configurações padrões de botões */
 
-.estilo-botao-padrao{
+.estilo-botao-padrao, .estilo-botao-padrao2{
     font: normal normal 20px "arial";
     background: black;
     padding: 10px 20px;
@@ -56,7 +79,19 @@
     border: none;
 }
 
-.estilo-botao-padrao:active{
+.estilo-botao-padrao2{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 5px 0px;
+    font-size: 18px;
+    width: 100px;
+}
+
+.estilo-botao-padrao2:hover{
+    text-decoration: underline;
+}
+
+.estilo-botao-padrao:active, .estilo-botao-padrao2:active{
     transform: scale(0.95);
 }
 
@@ -109,6 +144,72 @@
     width: 100%;
 }
 
+/* configurações de navegação */
+
+.config-display-header{
+    display: block;
+    width: 100dvw;
+}
+
+.config-nav{
+    background: black;
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+}
+
+.config-nav > a{
+    font: normal normal 20px arial;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.config-nav > h1{
+    margin-right: auto;
+}
+
+.config-nav > a:last-child{
+    margin-left: auto;
+}
+
+.config-nav > a:hover, .config-nav > h1:hover{
+    text-decoration: underline;
+}
+
+/* configurações padrões de formulários */
+
+.config-display-block-formulario{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.config-display-form{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.config-padrao{
+    padding: 0px 130px 0px 0px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+.config-especifico4{
+    box-shadow: 8px 8px 0px #e1e1e1;
+    background: white;
+    border-radius: 20px;
+    height: 450px;
+    width: 75dvw;
+    margin: auto;
+}
+
 /* configurações de responsividade */
 
 @media screen and (max-width: 1300px){
@@ -118,6 +219,9 @@
     #config-container-display{
         display: none;   
     }
+    .config-display-header{
+        display: none;
+    }
 }
 
 @media screen and (max-height: 500px){
@@ -126,5 +230,8 @@
     }
     #config-container-display{
         display: none;   
+    }
+    .config-display-header{
+        display: none;
     }
 }

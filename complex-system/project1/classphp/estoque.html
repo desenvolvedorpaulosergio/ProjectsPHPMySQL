@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classe de estoque</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    <link rel="stylesheet" href="../classcss/estilos-padroes.css">
+    <script src="../classjs/configjs.js"></script>
+</head>
+<body>
+    <header class="config-display-header">
+        <nav class="config-nav">
+            <h1 class="estilo-titulo-padrao2">Estoques</h1>
+            <a href="#">produtos</a>
+            <a href="#"><ins>estoques</ins></a>
+            <a href="#">clientes</a>
+            <a href="#">relatórios</a>
+            <a href="#">
+                <span class="material-symbols-outlined estilo-icon2">settings</span>
+            </a>
+        </nav>
+    </header>
+
+    <div class="config-display-block-formulario">
+        <div class="config-display-form">
+            <div class="config-padrao" id="config-especifico3">
+                <button class="estilo-botao-padrao2">cadastrar</button>
+                <button class="estilo-botao-padrao2">excluir</button>
+                <button class="estilo-botao-padrao2">alterar</button>
+            </div>
+            <div class="config-padrao config-especifico4"></div>
+        </div>
+    </div>
+
+    <div id="config-display-mensagem-erro">
+        <div class="config-mensagem-erro">
+            <div class="mensagem-erro">
+                <span class="material-symbols-outlined">warning</span>
+                <p class="mensagem config-especifico-mensagem">
+                    preencha os dados corretamente!!!
+                </p>
+                <button class="estilo-botao-padrao" onclick="eventoClose()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="config-display-mensagem">
+        <div class="config-mensagem-erro">
+            <div class="mensagem-erro">
+                <p class="mensagem config-especifico-mensagem">
+                    é necessário estar na tela cheia para usar o sistema!!!
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
