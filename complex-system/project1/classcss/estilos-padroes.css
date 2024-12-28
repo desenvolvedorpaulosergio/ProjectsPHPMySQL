@@ -158,7 +158,8 @@ body{
 }
 
 .config-positon-padrao{
-    position: absolute;
+    width: 50%;
+    position: fixed;
     top: 90dvh;
     left: 90dvw;
 }
@@ -280,32 +281,6 @@ body{
     flex-flow: column nowrap;
 }
 
-/* configurações de responsividade */
-
-@media screen and (max-width: 1300px){
-    #config-display-mensagem{
-        display: block;
-    }
-    #config-container-display{
-        display: none;   
-    }
-    .config-display-header{
-        display: none;
-    }
-}
-
-@media screen and (max-height: 500px){
-    #config-display-mensagem{
-        display: block;
-    }
-    #config-container-display{
-        display: none;   
-    }
-    .config-display-header{
-        display: none;
-    }
-}
-
 .config-form-padrao{
     width: 100%;
 }
@@ -361,3 +336,35 @@ body{
     width: 100dvw;
     height: 100dvh;
 }
+
+/* configurações de responsividade */
+
+@media screen and (max-width: 1300px){
+    #config-display-mensagem{
+        display: block;
+    }
+    #config-container-display{
+        display: none;   
+    }
+    .config-display-header{
+        display: none;
+    }
+}
+
+@media screen and (max-height: 500px){
+    #config-display-mensagem{
+        display: block;
+    }
+    #config-container-display{
+        display: none;   
+    }
+    .config-display-header{
+        display: none;
+    }
+}
+
+/* @media print {
+    #config-positon-padrao{
+        display: none;
+    }
+} */
