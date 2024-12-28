@@ -68,7 +68,7 @@ body{
 
 /* configurações padrões de botões */
 
-.estilo-botao-padrao, .estilo-botao-padrao2{
+.estilo-botao-padrao, .estilo-botao-padrao2, .estilo-botao-padrao3{
     font: normal normal 20px "arial";
     background: black;
     padding: 10px 20px;
@@ -87,11 +87,15 @@ body{
     width: 100px;
 }
 
+.estilo-botao-padrao3{
+    width: 250px;
+}
+
 .estilo-botao-padrao2:hover{
     text-decoration: underline;
 }
 
-.estilo-botao-padrao:active, .estilo-botao-padrao2:active{
+.estilo-botao-padrao:active, .estilo-botao-padrao2:active, .estilo-botao-padrao3:active{
     transform: scale(0.95);
 }
 
@@ -205,9 +209,15 @@ body{
     box-shadow: 8px 8px 0px #e1e1e1;
     background: white;
     border-radius: 20px;
+    overflow: hidden;
     height: 450px;
-    width: 75dvw;
+    width: 84dvw;
     margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
 }
 
 /* configurações de responsividade */
@@ -234,4 +244,26 @@ body{
     .config-display-header{
         display: none;
     }
+}
+
+.config-form-padrao{
+    width: 100%;
+}
+
+.config-form-padrao{
+    width: 100%;
+    /* background: red; */
+}
+
+.estilo-form-especifico1{
+    height: 85%;   
+}
+
+.estilo-form-especifico2{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 15px;
 }
