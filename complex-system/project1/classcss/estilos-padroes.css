@@ -35,6 +35,11 @@ body{
     align-items: center;
 }
 
+.estilo-padrao-inputs2{
+    width: 75%;
+    margin: 15px 0px;
+}
+
 .estilo-input-padrao{
     margin: -20px 0px 0px 0px;
     padding: 10px 0px; 
@@ -42,6 +47,17 @@ body{
     border: none;
     border-bottom: 2px solid black;
     font: normal normal 25px "arial";
+}
+
+.estilo-input-padrao2{
+    padding: 0px 0px 5px 0px;
+    font-size: 25px;
+    width: 98%;
+    margin: 0;
+}
+
+.estilo-input-padrao3{
+    /* width: 75%; */
 }
 
 .material-symbols-outlined{
@@ -53,6 +69,13 @@ body{
     padding: 0;
     font-size: 30px;
     margin-top: 6px;
+}
+
+.estilo-icon3{
+    margin: 0;
+    padding: 0;
+    font-size: 45px;
+    /* margin-top: -px; */
 }
 
 /* configurações padrões de mensagem/aviso*/
@@ -73,6 +96,7 @@ body{
     background: black;
     padding: 10px 20px;
     border-radius: 5px;
+    text-align: center;
     transition: 200ms;
     cursor: pointer;
     color: white;
@@ -89,6 +113,20 @@ body{
 
 .estilo-botao-padrao3{
     width: 250px;
+}
+
+.estilo-botao-padrao4{
+    width: 68%;
+    height: 58%;
+    font-size: 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.estilo-botao-padrao4 > span{
+    font-size: 100px;
 }
 
 .estilo-botao-padrao2:hover{
@@ -252,18 +290,42 @@ body{
 
 .config-form-padrao{
     width: 100%;
-    /* background: red; */
 }
 
 .estilo-form-especifico1{
-    height: 85%;   
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
 }
 
 .estilo-form-especifico2{
-    height: 10%;
+    height: 15%;
     display: flex;
     align-items: center;
     flex-flow: row nowrap;
     justify-content: center;
     gap: 15px;
+}
+
+.comprimento-padrao-forms{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.config-display-form-inline{
+    width: 75%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.config-display-form-inline > label{
+    /* background: red; */
 }
