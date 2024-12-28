@@ -66,11 +66,16 @@
 
 /* configurações do modal de erro */
 
-#config-display-mensagem-erro{
+#config-display-mensagem-erro, #config-display-mensagem{
     position: absolute;
-    display: block;
+    display: none;
     left: 0;
     top: 0;
+}
+
+#config-display-mensagem{
+    background: white;
+    display: none;
 }
 
 .config-mensagem-erro{
@@ -103,3 +108,23 @@
     color: white;
     width: 100%;
 }
+
+/* configurações de responsividade */
+
+@media screen and (max-width: 1200px){
+    #config-display-mensagem{
+        display: block;
+    }
+    #config-container-display{
+        display: none;   
+    }
+}
+
+/* @media screen and(orientation: portrait) and(min-width: 1200px){
+    #config-display-mensagem{
+        display: block;
+    }
+    #config-container-display{
+        display: none;   
+    }
+} */

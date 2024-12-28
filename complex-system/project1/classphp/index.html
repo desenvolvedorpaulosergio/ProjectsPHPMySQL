@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sistema de categoria complexa: projeto-cadastro</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
-    <link rel="stylesheet" href="../classcss/estilos-padroes.css">
     <link rel="stylesheet" href="../classcss/estilo-logon.css">
     <script src="../classjs/configjs.js"></script>
+    <link rel="stylesheet" href="../classcss/estilos-padroes.css">
 </head>
 <body>
     <div id="config-container-display">
@@ -43,7 +43,17 @@
                 <p class="mensagem config-especifico-mensagem">
                     preencha os dados corretamente!!!
                 </p>
-                <button class="estilo-botao-padrao">OK</button>
+                <button class="estilo-botao-padrao" onclick="eventoClose()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="config-display-mensagem">
+        <div class="config-mensagem-erro">
+            <div class="mensagem-erro">
+                <p class="mensagem config-especifico-mensagem">
+                    é necessário estar na tela cheia para usar o sistema!!!
+                </p>
             </div>
         </div>
     </div>

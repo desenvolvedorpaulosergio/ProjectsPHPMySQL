@@ -14,7 +14,7 @@ body{
 }
 
 #config-container-display{
-    display: none;
+    display: block;
     width: 1000px;
 }
 
@@ -63,5 +63,4 @@ body{
 #config-posicao-div{
     width: 85%;
     padding: 10px 10px;
-    background: red;
 }
