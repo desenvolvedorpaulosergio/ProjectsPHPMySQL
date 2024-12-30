@@ -57,7 +57,7 @@ body{
 }
 
 .estilo-input-padrao3{
-    /* width: 75%; */
+    width: 230px;
 }
 
 .material-symbols-outlined{
@@ -277,6 +277,11 @@ body{
     flex-flow: column nowrap;
 }
 
+.config-especifico5{
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .config-form-padrao{
     width: 100%;
 }
@@ -370,6 +375,10 @@ tr:hover{
     background: #0000001f;
 }
 
+.comprimento-botao{
+    width: 100px;
+}
+
 /* configurações de responsividade */
 
 @media screen and (max-width: 1300px){
@@ -400,4 +409,16 @@ tr:hover{
     .config-positon-padrao{
         display: none;
     }
+}
+
+/* configurações padrões de exclusão */
+
+.config-display-excluir{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
 }

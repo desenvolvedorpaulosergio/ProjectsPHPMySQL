@@ -41,12 +41,12 @@
                             <div class="config-display-form-inline">
                                 <label for="quantidade-produto" class="estilo-padrao-inputs estilo-padrao-inputs2">
                                     <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
-                                    <input type="number" name="quantidade-produto" class="estilo-input-padrao estilo-input-padrao2 estilo-input-padrao3 config-readonly-padrao" id="quantidade-produto" placeholder="quantidade" required step="1">
+                                    <input type="number" name="quantidade-produto" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="quantidade-produto" placeholder="quantidade" required step="1">
                                 </label>
 
                                 <label for="categoria-produto" class="estilo-padrao-inputs estilo-padrao-inputs2">
                                     <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
-                                    <input type="text" name="categoria-produto" class="estilo-input-padrao estilo-input-padrao2 estilo-input-padrao3 config-readonly-padrao" id="categoria-produto" placeholder="categoria" required list="categorias-produtos">
+                                    <input type="text" name="categoria-produto" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="categoria-produto" placeholder="categoria" required list="categorias-produtos">
                                     <datalist id="categorias-produtos">
                                         <option value="Bebidas">bebidas</option>
                                         <option value="Roupas">roupas</option>
@@ -65,12 +65,12 @@
                             <div class="config-display-form-inline">
                                 <label for="preco-custo" class="estilo-padrao-inputs estilo-padrao-inputs2">
                                     <span class="material-symbols-outlined estilo-icon3">paid</span>
-                                    <input type="number" name="preco-custo" class="estilo-input-padrao estilo-input-padrao2 estilo-input-padrao3 config-readonly-padrao" id="preco-custo" placeholder="preço custo" required step="0.05">
+                                    <input type="number" name="preco-custo" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-custo" placeholder="preço custo" required step="0.05">
                                 </label>
                                 
                                 <label for="preco-venda" class="estilo-padrao-inputs estilo-padrao-inputs2">
                                     <span class="material-symbols-outlined estilo-icon3">paid</span>
-                                    <input type="number" name="preco-venda" class="estilo-input-padrao estilo-input-padrao2 estilo-input-padrao3 config-readonly-padrao" id="preco-venda" placeholder="preço venda" required step="0.05">
+                                    <input type="number" name="preco-venda" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-venda" placeholder="preço venda" required step="0.05">
                                 </label>
                             </div>
 
@@ -98,16 +98,17 @@
             </div>
 
             <div id="config-display-excluir">
-                <form class="config-especifico4">
-                    
+                <form class="config-especifico4 config-especifico5">
+                    <div class="config-display-excluir">
+                        <label for="obs-produto" class="estilo-padrao-inputs">
+                            <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
+                            <input type="number" name="cod-produto" id="cod-produto" class="estilo-input-padrao estilo-input-padrao2 estilo-input-padrao3 config-readonly-padrao" id="obs-produto" placeholder="código do produto..." required>
+                        </label>
+                        <div class="estilo-botao-padrao comprimento-botao" onclick="eventoVisualizar()">visualizar</div>
+                        <div class="estilo-botao-padrao comprimento-botao" onclick="eventoVisualizar()">visualizar</div>
+                    </div>
                 </form>
             </div>
-
-
-
-
-
-
         </div>
     </div>
     
