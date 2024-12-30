@@ -2,6 +2,6 @@
     display: block;
 }
 
-#img-produto, #config-display-cadastro{
+#img-produto, #config-display-cadastro, #config-display-excluir{
     display: none;
 }

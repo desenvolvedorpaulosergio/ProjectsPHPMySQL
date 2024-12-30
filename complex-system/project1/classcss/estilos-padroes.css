@@ -343,8 +343,8 @@ body{
     border-collapse: collapse;
     table-layout: fixed;
     margin: auto;
-    width: 90%;
-    margin-top: 20px;
+    width: 95%;
+    margin-top: 10px;
 }
 
 th, td{
@@ -363,6 +363,8 @@ th{
     border: 2px solid black;
     background: #191919;
     color: white;
+    position: sticky;
+    top: 0;
 }
 
 td{
@@ -377,6 +379,17 @@ tr:hover{
 
 .comprimento-botao{
     width: 100px;
+}
+
+.condig-tamanho-tabela{
+    /* background: red; */
+    overflow-y: auto;
+    height: 300px;
+    width: 100%;
+}
+
+.condig-tamanho-tabela::-webkit-scrollbar{
+    display: none;
 }
 
 /* configurações de responsividade */
@@ -421,4 +434,8 @@ tr:hover{
     align-items: center;
     gap: 10px;
     padding: 10px;
+}
+
+.comprimento-botao{
+    width: 120px;
 }

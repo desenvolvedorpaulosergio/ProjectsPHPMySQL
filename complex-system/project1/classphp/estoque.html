@@ -100,13 +100,41 @@
             <div id="config-display-excluir">
                 <form class="config-especifico4 config-especifico5">
                     <div class="config-display-excluir">
-                        <label for="obs-produto" class="estilo-padrao-inputs">
+                        <label for="cod-produto" class="estilo-padrao-inputs">
                             <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
                             <input type="number" name="cod-produto" id="cod-produto" class="estilo-input-padrao estilo-input-padrao2 estilo-input-padrao3 config-readonly-padrao" id="obs-produto" placeholder="código do produto..." required>
                         </label>
-                        <div class="estilo-botao-padrao comprimento-botao" onclick="eventoVisualizar()">visualizar</div>
+                        <button class="estilo-botao-padrao comprimento-botao">procurar</button>
                         <div class="estilo-botao-padrao comprimento-botao" onclick="eventoVisualizar()">visualizar</div>
                     </div>
+
+                    <div class="condig-tamanho-tabela">
+                        <table class="estilo-padrao-tabela">
+                            <tr>
+                                <th class="comprimento-padrao-campo">cod</th>
+                                <th>nome</th>
+                                <th>quantidade</th>
+                                <th>categoria</th>
+                                <th>preço custo</th>
+                                <th>preço venda</th>
+                                <th>validade</th>
+                                <th>observação</th>
+                                <th>img</th>
+                            </tr>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                        </table>
+                    </div>
+
                 </form>
             </div>
         </div>

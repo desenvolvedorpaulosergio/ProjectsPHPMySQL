@@ -25,6 +25,18 @@ window.document.addEventListener('DOMContentLoaded', function(){
 
 function eventoJanelaCadastro(){
     window.document.getElementById('config-display-cadastro').style.display = "block"
-    // window.document.getElementById('config-display-mensagem-erro').style.display = "none"
-    // window.document.getElementById('config-display-mensagem-erro').style.display = "none"
+    window.document.getElementById('config-display-excluir').style.display = "none"
+
+    window.document.getElementById('estilo-underline-cadastrar').style.textDecoration = 'underline'
+    window.document.getElementById('estilo-underline-excluir').style.textDecoration = 'none'
+    window.document.getElementById('estilo-underline-alterar').style.textDecoration = 'none'
+}
+
+function eventoJanelaExcluir(){
+    window.document.getElementById('config-display-cadastro').style.display = "none"
+    window.document.getElementById('config-display-excluir').style.display = "block"
+
+    window.document.getElementById('estilo-underline-cadastrar').style.textDecoration = 'none'
+    window.document.getElementById('estilo-underline-excluir').style.textDecoration = 'underline'
+    window.document.getElementById('estilo-underline-alterar').style.textDecoration = 'none'
 }
