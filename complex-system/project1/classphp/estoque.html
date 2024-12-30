@@ -36,17 +36,17 @@
                         <div class="comprimento-padrao-forms">
                             <label for="nome-produto" class="estilo-padrao-inputs estilo-padrao-inputs2">
                                 <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
-                                <input type="text" name="nome-produto" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="nome-produto" placeholder="nome do produto..." required>
+                                <input type="text" name="nome-produto" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="nome-produto" placeholder="nome do produto..." required oninput="eventoCaractere()">
                             </label>
                             <div class="config-display-form-inline">
                                 <label for="quantidade-produto" class="estilo-padrao-inputs estilo-padrao-inputs2">
                                     <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
-                                    <input type="number" name="quantidade-produto" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="quantidade-produto" placeholder="quantidade" required step="1">
+                                    <input type="number" name="quantidade-produto" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="quantidade-produto" placeholder="quantidade" required step="1" oninput="eventoQuantidade()">
                                 </label>
 
                                 <label for="categoria-produto" class="estilo-padrao-inputs estilo-padrao-inputs2">
                                     <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
-                                    <input type="text" name="categoria-produto" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="categoria-produto" placeholder="categoria" required list="categorias-produtos">
+                                    <input type="text" name="categoria-produto" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="categoria-produto" placeholder="categoria" required list="categorias-produtos" oninput="eventoCaractere2()">
                                     <datalist id="categorias-produtos">
                                         <option value="Bebidas">bebidas</option>
                                         <option value="Roupas">roupas</option>
@@ -70,23 +70,23 @@
                                 
                                 <label for="preco-venda" class="estilo-padrao-inputs estilo-padrao-inputs2">
                                     <span class="material-symbols-outlined estilo-icon3">paid</span>
-                                    <input type="number" name="preco-venda" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-venda" placeholder="preço venda" required step="0.05" oninput="eventoPreco()">
+                                    <input type="number" name="preco-venda" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" placeholder="preço venda" required step="0.05" oninput="eventoPreco()">
                                 </label>
                             </div>
 
                             <label for="validade-produto" class="estilo-padrao-inputs estilo-padrao-inputs2">
                                 <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
-                                <input type="text" name="validade-produto" id="validade-produto" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="nome-usuario" placeholder="validade/garantia: dd/mm/aaaa" required>
+                                <input type="text" name="validade-produto" id="validade-produto" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" placeholder="validade/garantia: dd/mm/aaaa" required oninput="eventoRegEx()">
                             </label>
                         </div>
                         <div class="comprimento-padrao-forms">
-                            <input type="file" name="img-produto" id="img-produto">
+                            <input type="file" name="img-produto" id="img-produto" accept=".jpg, .jpeg, .png">
                             <div class="estilo-botao-padrao estilo-botao-padrao4" onclick="eventoCamera()">
                                 <span class="material-symbols-outlined">photo_camera</span>
                             </div>
                             <label for="obs-produto" class="estilo-padrao-inputs estilo-padrao-inputs2">
                                 <span class="material-symbols-outlined estilo-icon3">warning</span>
-                                <input type="text" name="obs-produto" id="obs-produto" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="obs-produto" placeholder="validade/garantia: dd/mm/aaaa" required>
+                                <input type="text" name="obs-produto" id="obs-produto" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="obs-produto" placeholder="observação" required>
                             </label>
                         </div>
                     </div>
@@ -183,7 +183,7 @@
                         </label>
                         <label for="quantidade-produto3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs4">
                             <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
-                            <input type="number" name="quantidade-produto3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="quantidade-produto3" placeholder="quantidade" required step="1" readonly>
+                            <input type="number" name="quantidade-produto3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="quantidade-produto3" placeholder="quantidade" required step="1" oninput="eventoQuantidade2()">
                         </label>
                         <label for="categoria-produto3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs4">
                             <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
@@ -203,18 +203,18 @@
                         </label>
                         <label for="preco-custo3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs4">
                             <span class="material-symbols-outlined estilo-icon3">paid</span>
-                            <input type="number" name="preco-custo3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-custo3" placeholder="preço custo" required step="0.05" readonly oninput="eventoPreco()">
+                            <input type="number" name="preco-custo3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-custo3" placeholder="preço custo" required step="0.05" readonly oninput="eventoPreco3()">
                         </label>
                     </div>
                     <div class="config-inline-flex">
                         <label for="preco-venda3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs4">
                             <span class="material-symbols-outlined estilo-icon3">paid</span>
-                            <input type="number" name="preco-venda3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-venda3" placeholder="preço venda" required step="0.05" readonly oninput="eventoPreco()">
+                            <input type="number" name="preco-venda3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-venda3" placeholder="preço venda" required step="0.05" readonly oninput="eventoPreco3()">
                         </label>
-                        <input type="file" name="img-produto" id="img-produto3">
+                        <input type="file" name="img-produto" id="img-produto3" accept=".jpg, .jpeg, .png">
                         <label for="validade-produto3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs3">
                             <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
-                            <input type="text" name="validade-produto3" id="validade-produto3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" placeholder="validade/garantia" required readonly>
+                            <input type="text" name="validade-produto3" id="validade-produto3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" placeholder="validade/garantia" required readonly oninput="eventoRegEx2()">
                         </label>
                         <label for="observacao3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs3">
                             <span class="material-symbols-outlined estilo-icon3">warning</span>
