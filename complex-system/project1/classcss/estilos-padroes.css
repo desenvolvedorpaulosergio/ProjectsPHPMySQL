@@ -160,6 +160,14 @@ body{
     left: 90dvw;
 }
 
+.estilo-botao-padrao7{
+    padding: 5px 80px;
+}
+
+.estilo-botao-padrao7 > span{
+    font-size: 30px;
+}
+
 /* configurações do modal de erro */
 
 #config-display-mensagem-erro, #config-display-mensagem{
@@ -382,10 +390,14 @@ tr:hover{
 }
 
 .condig-tamanho-tabela{
-    /* background: red; */
     overflow-y: auto;
     height: 300px;
     width: 100%;
+    border: 1px solid #0000003d;
+}
+
+.condig-tamanho-tabela2{
+    height: 210px;
 }
 
 .condig-tamanho-tabela::-webkit-scrollbar{
@@ -438,4 +450,26 @@ tr:hover{
 
 .comprimento-botao{
     width: 120px;
+}
+
+.config-inline-flex{
+    width: 100%;
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.estilo-comprimento-padrao-input1{
+    width: 210px;
+}
+
+.estilo-padrao-inputs3{
+    width: 260px;
+}
+
+.estilo-padrao-inputs4{
+    width: 240px;
 }

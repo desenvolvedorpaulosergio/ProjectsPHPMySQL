@@ -2,6 +2,6 @@
     display: block;
 }
 
-#img-produto, #config-display-cadastro, #config-display-excluir{
+#img-produto, #config-display-cadastro, #config-display-excluir, #alterar-produto, #img-produto3{
     display: none;
 }

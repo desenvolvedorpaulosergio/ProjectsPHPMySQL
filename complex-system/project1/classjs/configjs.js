@@ -40,3 +40,14 @@ function eventoJanelaExcluir(){
     window.document.getElementById('estilo-underline-excluir').style.textDecoration = 'underline'
     window.document.getElementById('estilo-underline-alterar').style.textDecoration = 'none'
 }
+
+function eventoErro(){
+    let cod = document.getElementById('cod-produto3').value
+    if(cod <= 0){
+        window.document.getElementById('cod-produto3').style.borderColor = 'red'
+        window.document.getElementById('cod-produto3').style.color = 'red'
+    }else{
+        window.document.getElementById('cod-produto3').style.borderColor = 'black'
+        window.document.getElementById('cod-produto3').style.color = 'black'
+    }
+}

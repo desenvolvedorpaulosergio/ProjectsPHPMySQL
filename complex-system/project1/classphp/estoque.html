@@ -31,7 +31,7 @@
                 <button class="estilo-botao-padrao2" onclick="eventoJanelaAlterar()" id="estilo-underline-alterar">alterar</button>
             </div>
             <div id="config-display-cadastro">
-                <form class="config-especifico4">
+                <form class="config-especifico4" method="post" action="teste.php">
                     <div class="config-form-padrao estilo-form-especifico1">
                         <div class="comprimento-padrao-forms">
                             <label for="nome-produto" class="estilo-padrao-inputs estilo-padrao-inputs2">
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                     <div class="config-form-padrao estilo-form-especifico2">
-                        <button class="estilo-botao-padrao3">verificar</button>
+                        <div class="estilo-botao-padrao3" onclick="eventoVerificar()">verificar</div>
                         <div class="estilo-botao-padrao3" onclick="eventoVisualizar()">visualizar</div>
                     </div>
                 </form>
@@ -104,7 +104,7 @@
                             <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
                             <input type="number" name="cod-produto" id="cod-produto" class="estilo-input-padrao estilo-input-padrao2 estilo-input-padrao3 config-readonly-padrao" id="obs-produto" placeholder="código do produto..." required>
                         </label>
-                        <button class="estilo-botao-padrao comprimento-botao">procurar</button>
+                        <button class="estilo-botao-padrao comprimento-botao">excluir</button>
                         <div class="estilo-botao-padrao comprimento-botao" onclick="eventoVisualizar()">visualizar</div>
                     </div>
 
@@ -134,7 +134,96 @@
                             </tr>
                         </table>
                     </div>
+                </form>
+            </div>
 
+            <div id="config-display-alterar">
+                <form class="config-especifico4 config-especifico5">
+                    <div class="config-display-excluir">
+                        <label for="cod-produto3" class="estilo-padrao-inputs">
+                            <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
+                            <input type="number" name="cod-produto3" id="cod-produto3" class="estilo-input-padrao estilo-input-padrao2 estilo-input-padrao3 config-readonly-padrao" placeholder="código do produto..." required oninput="eventoErro()">
+                        </label>
+                        <div class="estilo-botao-padrao comprimento-botao">procurar</div>
+                        <button class="estilo-botao-padrao comprimento-botao" name="alterar-produto" id="alterar-produto">alterar</button>
+                        <div class="estilo-botao-padrao comprimento-botao" onclick="eventoVisualizar()">visualizar</div>
+                    </div>
+
+                    <div class="condig-tamanho-tabela condig-tamanho-tabela2">
+                        <table class="estilo-padrao-tabela">
+                            <tr>
+                                <th class="comprimento-padrao-campo">cod</th>
+                                <th>nome</th>
+                                <th>quantidade</th>
+                                <th>categoria</th>
+                                <th>preço custo</th>
+                                <th>preço venda</th>
+                                <th>validade</th>
+                                <th>observação</th>
+                                <th>img</th>
+                            </tr>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="config-inline-flex">
+                        <label for="nome-produto3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs3">
+                            <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
+                            <input type="text" name="nome-produto3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="nome-produto3" placeholder="nome do produto..." required readonly>
+                        </label>
+                        <label for="quantidade-produto3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs4">
+                            <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
+                            <input type="number" name="quantidade-produto3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="quantidade-produto3" placeholder="quantidade" required step="1" readonly>
+                        </label>
+                        <label for="categoria-produto3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs4">
+                            <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
+                            <input type="text" name="categoria-produto3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="categoria-produto3" placeholder="categoria" required list="categorias-produtos" readonly>
+                            <datalist id="categorias-produtos">
+                                <option value="Bebidas">bebidas</option>
+                                <option value="Roupas">roupas</option>
+                                <option value="Eletrônicos">eletrônicos</option>
+                                <option value="Alimentos">alimentos</option>
+                                <option value="Cosméticos">cosméticos</option>
+                                <option value="Móveis">móveis</option>
+                                <option value="Brinquedos">brinquedos</option>
+                                <option value="Livros">livros</option>
+                                <option value="Ferramentas">ferramentas</option>
+                                <option value="Artigos Esportivos">artigos esportivos</option>
+                            </datalist>
+                        </label>
+                        <label for="preco-custo3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs4">
+                            <span class="material-symbols-outlined estilo-icon3">paid</span>
+                            <input type="number" name="preco-custo3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-custo3" placeholder="preço custo" required step="0.05" readonly>
+                        </label>
+                    </div>
+                    <div class="config-inline-flex">
+                        <label for="preco-venda3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs4">
+                            <span class="material-symbols-outlined estilo-icon3">paid</span>
+                            <input type="number" name="preco-venda3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-venda3" placeholder="preço venda" required step="0.05" readonly>
+                        </label>
+                        <input type="file" name="img-produto" id="img-produto3">
+                        <label for="validade-produto3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs3">
+                            <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
+                            <input type="text" name="validade-produto3" id="validade-produto3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" placeholder="validade/garantia" required readonly>
+                        </label>
+                        <label for="observacao3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs3">
+                            <span class="material-symbols-outlined estilo-icon3">warning</span>
+                            <input type="text" name="observacao3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="observacao3" placeholder="observação..." required readonly>
+                        </label>
+                        <div class="estilo-botao-padrao estilo-botao-padrao7">
+                            <span class="material-symbols-outlined estilo-icon3">photo_camera</span>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
