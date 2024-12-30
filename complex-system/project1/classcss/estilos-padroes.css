@@ -111,10 +111,6 @@ body{
     width: 100px;
 }
 
-.estilo-botao-padrao3{
-    width: 250px;
-}
-
 .estilo-botao-padrao4{
     width: 68%;
     height: 58%;
@@ -130,9 +126,9 @@ body{
 }
 
 .estilo-botao-padrao3{
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
+    text-align: center;
+    padding: 10px;
+    width: 300px;
 }
 
 .estilo-botao-padrao5, .estilo-botao-padrao6{
@@ -328,6 +324,7 @@ body{
 .config-display-block-tabela{
     background: white;
     position: absolute;
+    display: none;
     left: 0;
     top: 0;
 }
@@ -335,6 +332,42 @@ body{
 .config-display-block-tabela{
     width: 100dvw;
     height: 100dvh;
+}
+
+.estilo-padrao-tabela{
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: auto;
+    width: 90%;
+    margin-top: 20px;
+}
+
+th, td{
+    font: normal bold 15px "fonte-titulo";
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px 0px;
+    overflow: hidden;
+}
+
+.comprimento-padrao-campo{
+    width: 50px;
+}
+
+th{
+    border: 2px solid black;
+    background: #191919;
+    color: white;
+}
+
+td{
+    border: 1px solid #0000004d;
+    font: normal lighter 15px arial;
+    text-align: center;
+}
+
+tr:hover{
+    background: #0000001f;
 }
 
 /* configurações de responsividade */
@@ -363,8 +396,8 @@ body{
     }
 }
 
-/* @media print {
-    #config-positon-padrao{
+@media print {
+    .config-positon-padrao{
         display: none;
     }
-} */
+}

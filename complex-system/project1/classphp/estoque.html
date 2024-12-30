@@ -26,9 +26,9 @@
     <div class="config-display-block-formulario">
         <div class="config-display-form">
             <div class="config-padrao" id="config-especifico3">
-                <button class="estilo-botao-padrao2">cadastrar</button>
-                <button class="estilo-botao-padrao2">excluir</button>
-                <button class="estilo-botao-padrao2">alterar</button>
+                <button class="estilo-botao-padrao2" onclick="eventoJanelaCadastro()" id="estilo-underline-cadastrar">cadastrar</button>
+                <button class="estilo-botao-padrao2" onclick="eventoJanelaExcluir()" id="estilo-underline-excluir">excluir</button>
+                <button class="estilo-botao-padrao2" onclick="eventoJanelaAlterar()" id="estilo-underline-alterar">alterar</button>
             </div>
             <div id="config-display-cadastro">
                 <form class="config-especifico4">
@@ -92,7 +92,7 @@
                     </div>
                     <div class="config-form-padrao estilo-form-especifico2">
                         <button class="estilo-botao-padrao3">verificar</button>
-                        <button class="estilo-botao-padrao3">visualizar</button>
+                        <div class="estilo-botao-padrao3" onclick="eventoVisualizar()">visualizar</div>
                     </div>
                 </form>
             </div>
@@ -101,6 +101,30 @@
     
     <div class="config-display-block-tabela">
         <div class="config-display-flex-tabela">
+            <table class="estilo-padrao-tabela">
+                <tr>
+                    <th class="comprimento-padrao-campo">cod</th>
+                    <th>nome</th>
+                    <th>quantidade</th>
+                    <th>categoria</th>
+                    <th>preço custo</th>
+                    <th>preço venda</th>
+                    <th>validade</th>
+                    <th>observação</th>
+                    <th>img</th>
+                </tr>
+                <tr>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+            </table>
             <div class="config-positon-padrao">
                 <span class="material-symbols-outlined estilo-botao-padrao5" onclick="window.print()">print</span>
                 <span class="material-symbols-outlined estilo-botao-padrao5" onclick="eventoFechamento()">close</span>
