@@ -65,12 +65,12 @@
                             <div class="config-display-form-inline">
                                 <label for="preco-custo" class="estilo-padrao-inputs estilo-padrao-inputs2">
                                     <span class="material-symbols-outlined estilo-icon3">paid</span>
-                                    <input type="number" name="preco-custo" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-custo" placeholder="preço custo" required step="0.05">
+                                    <input type="number" name="preco-custo" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-custo" placeholder="preço custo" required step="0.05" oninput="eventoPreco()">
                                 </label>
                                 
                                 <label for="preco-venda" class="estilo-padrao-inputs estilo-padrao-inputs2">
                                     <span class="material-symbols-outlined estilo-icon3">paid</span>
-                                    <input type="number" name="preco-venda" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-venda" placeholder="preço venda" required step="0.05">
+                                    <input type="number" name="preco-venda" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-venda" placeholder="preço venda" required step="0.05" oninput="eventoPreco()">
                                 </label>
                             </div>
 
@@ -203,13 +203,13 @@
                         </label>
                         <label for="preco-custo3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs4">
                             <span class="material-symbols-outlined estilo-icon3">paid</span>
-                            <input type="number" name="preco-custo3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-custo3" placeholder="preço custo" required step="0.05" readonly>
+                            <input type="number" name="preco-custo3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-custo3" placeholder="preço custo" required step="0.05" readonly oninput="eventoPreco()">
                         </label>
                     </div>
                     <div class="config-inline-flex">
                         <label for="preco-venda3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs4">
                             <span class="material-symbols-outlined estilo-icon3">paid</span>
-                            <input type="number" name="preco-venda3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-venda3" placeholder="preço venda" required step="0.05" readonly>
+                            <input type="number" name="preco-venda3" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-venda3" placeholder="preço venda" required step="0.05" readonly oninput="eventoPreco()">
                         </label>
                         <input type="file" name="img-produto" id="img-produto3">
                         <label for="validade-produto3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs3">
