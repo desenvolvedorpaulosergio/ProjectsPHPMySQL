@@ -183,6 +183,7 @@ body{
 }
 
 .config-mensagem-erro{
+    background: white;
     height: 100dvh;
     width: 100dvw;
     display: flex;

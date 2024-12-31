@@ -65,6 +65,17 @@ function eventoErro(){
     }
 }
 
+function eventoErro2(){
+    let cod = document.getElementById('cod-produto').value
+    if(cod <= 0){
+        window.document.getElementById('cod-produto').style.borderColor = 'red'
+        window.document.getElementById('cod-produto').style.color = 'red'
+    }else{
+        window.document.getElementById('cod-produto').style.borderColor = 'black'
+        window.document.getElementById('cod-produto').style.color = 'black'
+    }
+}
+
 function eventoPreco(){
     let precoCusto = document.getElementById('preco-custo').value
     let pecoVenda = document.getElementById('preco-venda').value
@@ -167,4 +178,52 @@ function eventoRegEx2(){
         window.document.getElementById('validade-produto3').style.color = 'red'
         window.document.getElementById('validade-produto3').style.borderColor = 'red'
     }
+}
+
+window.document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.config-display-elementos2').forEach(function(elementos){
+        elementos.style.display = 'none'
+    })
+})
+
+function eventoVerificar(){
+    let nomeProduto = document.getElementById('nome-produto').value
+    let quantidade = document.getElementById('quantidade-produto').value
+    let categoria = document.getElementById('categoria-produto').value
+    let precoCusto = document.getElementById('preco-custo').value
+    let precoVenda = document.getElementById('preco-venda').value
+    let validade = document.getElementById('validade-produto').value
+    let iconProduto = document.getElementById('img-produto').value
+    let observacao = document.getElementById('obs-produto').value
+
+    if(!(nomeProduto.length > 3 && quantidade > 0 && categoria.length > 3 && precoCusto > 0 && precoVenda > 0 
+    && precoVenda > precoCusto && /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/.test(validade) && iconProduto != "" && observacao != "")){
+        document.querySelectorAll('.config-display-elementos1').forEach(function(elementos){
+            elementos.style.display = 'none'
+        })
+
+        document.querySelectorAll('.config-display-elementos2').forEach(function(elementos){
+            elementos.style.display = 'block'
+        })
+
+        document.querySelectorAll('.config-readonly-padrao').forEach(function(elementos){
+            elementos.readOnly = true
+        })
+    }else{
+        window.document.getElementById('config-display-mensagem-erro').style.display = 'block'
+    }
+}
+
+function eventoCancelar(){
+    document.querySelectorAll('.config-display-elementos1').forEach(function(elementos){
+        elementos.style.display = 'block'
+    })
+
+    document.querySelectorAll('.config-display-elementos2').forEach(function(elementos){
+        elementos.style.display = 'none'
+    })
+
+    document.querySelectorAll('.config-readonly-padrao').forEach(function(elementos){
+        elementos.readOnly = false
+    })
 }

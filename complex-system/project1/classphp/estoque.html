@@ -31,7 +31,7 @@
                 <button class="estilo-botao-padrao2" onclick="eventoJanelaAlterar()" id="estilo-underline-alterar">alterar</button>
             </div>
             <div id="config-display-cadastro">
-                <form class="config-especifico4" method="post" action="teste.php">
+                <form class="config-especifico4" method="post" action="teste.php" enctype="multipart/form-data">
                     <div class="config-form-padrao estilo-form-especifico1">
                         <div class="comprimento-padrao-forms">
                             <label for="nome-produto" class="estilo-padrao-inputs estilo-padrao-inputs2">
@@ -70,7 +70,7 @@
                                 
                                 <label for="preco-venda" class="estilo-padrao-inputs estilo-padrao-inputs2">
                                     <span class="material-symbols-outlined estilo-icon3">paid</span>
-                                    <input type="number" name="preco-venda" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" placeholder="preço venda" required step="0.05" oninput="eventoPreco()">
+                                    <input type="number" name="preco-venda" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="preco-venda" placeholder="preço venda" required step="0.05" oninput="eventoPreco()">
                                 </label>
                             </div>
 
@@ -91,18 +91,23 @@
                         </div>
                     </div>
                     <div class="config-form-padrao estilo-form-especifico2">
-                        <div class="estilo-botao-padrao3" onclick="eventoVerificar()">verificar</div>
-                        <div class="estilo-botao-padrao3" onclick="eventoVisualizar()">visualizar</div>
+                        <div class="estilo-botao-padrao3 config-display-elementos1" onclick="eventoVerificar()">verificar</div>
+                        <div class="estilo-botao-padrao3 config-display-elementos1" onclick="eventoVisualizar()">visualizar</div>
+
+                        <button type="submit" class="estilo-botao-padrao3 config-display-elementos2" onclick="eventoCadastrar()">cadastrar</button>
+                        <div class="estilo-botao-padrao3 config-display-elementos2" onclick="eventoCancelar()">cancelar</div>
+                        <div class="estilo-botao-padrao3 config-display-elementos2" onclick="eventoVisualizar()">visualizar</div>
+
                     </div>
                 </form>
             </div>
 
             <div id="config-display-excluir">
-                <form class="config-especifico4 config-especifico5">
+                <form class="config-especifico4 config-especifico5" method="post" enctype="multipart/form-data">
                     <div class="config-display-excluir">
                         <label for="cod-produto" class="estilo-padrao-inputs">
                             <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
-                            <input type="number" name="cod-produto" id="cod-produto" class="estilo-input-padrao estilo-input-padrao2 estilo-input-padrao3 config-readonly-padrao" id="obs-produto" placeholder="código do produto..." required>
+                            <input type="number" name="cod-produto" id="cod-produto" class="estilo-input-padrao estilo-input-padrao2 estilo-input-padrao3 config-readonly-padrao" id="obs-produto" placeholder="código do produto..." required oninput="eventoErro2()">
                         </label>
                         <button class="estilo-botao-padrao comprimento-botao">excluir</button>
                         <div class="estilo-botao-padrao comprimento-botao" onclick="eventoVisualizar()">visualizar</div>
@@ -138,13 +143,13 @@
             </div>
 
             <div id="config-display-alterar">
-                <form class="config-especifico4 config-especifico5">
+                <form class="config-especifico4 config-especifico5" method="post" enctype="multipart/form-data">
                     <div class="config-display-excluir">
                         <label for="cod-produto3" class="estilo-padrao-inputs">
                             <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
                             <input type="number" name="cod-produto3" id="cod-produto3" class="estilo-input-padrao estilo-input-padrao2 estilo-input-padrao3 config-readonly-padrao" placeholder="código do produto..." required oninput="eventoErro()">
                         </label>
-                        <div class="estilo-botao-padrao comprimento-botao">procurar</div>
+                        <div class="estilo-botao-padrao comprimento-botao" onclick="eventoProcurar()">procurar</div>
                         <button class="estilo-botao-padrao comprimento-botao" name="alterar-produto" id="alterar-produto">alterar</button>
                         <div class="estilo-botao-padrao comprimento-botao" onclick="eventoVisualizar()">visualizar</div>
                     </div>
