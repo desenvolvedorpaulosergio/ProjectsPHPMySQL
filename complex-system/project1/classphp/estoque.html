@@ -18,7 +18,7 @@
             <a href="#">clientes</a>
             <a href="#">relatórios</a>
             <a href="#">
-                <span class="material-symbols-outlined estilo-icon2">settings</span>
+                <span class="material-symbols-outlined estilo-icon2" onclick="eventoClick()">settings</span>
             </a>
         </nav>
     </header>
@@ -282,19 +282,44 @@
     <div id="config-display-perfil">
         <div class="config-elementos-display">
             <div class="elementos1">
-                <button class="estilo-botao-padrao">X</button>
+                <button class="estilo-botao-padrao" onclick="eventoCloser2()">X</button>
                 <span>Configurações</span>
             </div>
-            <div class="elementos2">
-                <img src="../resources/icon-user.png" alt="">
+            <form>
+                <div class="elementos2">
+                    <img src="../resources/icon-user.png" alt="icon-user">
+                    <br>
+                        <h1>usuario123</h1>
+                    <br>
+                    <button class="estilo-botao-padrao estilo-botao-padrao7">mudar icone</button>
+                </div>
+            </form>
+            <form class="config-form2">
                 <br>
-                    <h1>usuario123</h1>
-                <br>
-                <button class="estilo-botao-padrao estilo-botao-padrao7">mudar icone</button>
-            </div>
+                <label for="nome-usuario" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs3">
+                    <span class="material-symbols-outlined estilo-icon3">person</span>
+                    <input type="text" name="nome-usuario" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="nome-usuario" placeholder="novo usuario" required readonly>
+                </label>
+                <label for="senha-usuario" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs3">
+                    <span class="material-symbols-outlined estilo-icon3">key</span>
+                    <input type="text" name="senha-usuario" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="senha-usuario" placeholder="nova senha" required readonly>
+                </label>
+                <button class="estilo-botao-padrao estilo-botao-padrao7">atualizar</button>
+            </form>
         </div>
     </div>
 
+    <div id="config-display-mensagem-ok">
+        <div class="config-mensagem-erro">
+            <div class="mensagem-erro">
+                <span class="material-symbols-outlined">check</span>
+                <p class="mensagem config-especifico-mensagem">
+                    transação realizada com sucesso!!!
+                </p>
+                <button class="estilo-botao-padrao" onclick="eventoTransação()">OK</button>
+            </div>
+        </div>
+    </div>
 
 
 
