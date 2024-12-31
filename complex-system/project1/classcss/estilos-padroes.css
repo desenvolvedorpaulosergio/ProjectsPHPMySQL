@@ -179,10 +179,6 @@ body{
     top: 0;
 }
 
-#config-display-mensagem-ok{
-    display: block;
-}
-
 #config-display-mensagem{
     background: white;
     display: none;
@@ -484,18 +480,27 @@ tr:hover{
 /* configurações padrões de perfil */
 
 @keyframes animacao {
-    to{
+    from{
+        transform: translateX(1000px);
+    }to{
         transform: translateX(0px);
     }
 }
 
+@keyframes animacao2 {
+    from{
+        transform: translateX(0px);
+    }to{
+        transform: translateX(1000px);
+    }
+}
+
 #config-display-perfil{
-    display: block;
+    display: none;
     position: absolute;
     left: 77dvw;
     top: 0;
-    animation: animacao 600ms linear both;
-    transform: translateX(1000px);
+    animation: animacao 200ms linear both;
 }
 
 #config-display-perfil > div{

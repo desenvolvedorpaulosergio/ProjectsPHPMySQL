@@ -3,6 +3,11 @@ function eventoClose(){
     window.document.getElementById('config-container-display').style.display = "block"
 }
 
+function eventoTransação(){
+    window.document.getElementById('config-display-mensagem-ok').style.display = "none"
+    window.document.getElementById('config-container-display').style.display = "block"
+}
+
 function eventoCamera(){
     window.document.getElementById('img-produto').click()
 }
@@ -226,4 +231,16 @@ function eventoCancelar(){
     document.querySelectorAll('.config-readonly-padrao').forEach(function(elementos){
         elementos.readOnly = false
     })
+}
+
+function eventoClick(){
+    window.document.getElementById('config-display-perfil').style.animationName = 'animacao'
+    window.document.getElementById('config-display-perfil').style.display = 'block'
+}
+
+function eventoAtualizarPerfil(){
+    window.document.getElementById('config-display-perfil').style.animationName = 'animacao2'
+    setTimeout(function(){
+        window.document.getElementById('config-display-perfil').style.display = 'none'
+    },500)
 }
