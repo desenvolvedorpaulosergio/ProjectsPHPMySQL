@@ -421,7 +421,7 @@ tr:hover{
     }
 }
 
-@media screen and (max-height: 500px){
+@media screen and (max-height: 600px){
     #config-display-mensagem{
         display: block;
     }
