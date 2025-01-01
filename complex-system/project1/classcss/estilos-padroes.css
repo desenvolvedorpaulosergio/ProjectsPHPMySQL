@@ -541,6 +541,10 @@ tr:hover{
     transition: 200ms;
 }
 
+.elementos2 > img:hover{
+    transform: scale(1.01);
+}
+
 .elementos2 > h1{
     font: normal bold 30px 'fonte-titulo';
 }

@@ -287,7 +287,8 @@
             </div>
             <form>
                 <div class="elementos2">
-                    <img src="../resources/icon-user.png" alt="icon-user">
+                    <input type="file" name="elemento-file" id="elemento-file">
+                    <img src="../resources/icon-user.png" alt="icon-user" onclick="document.getElementById('elemento-file').click()">
                     <br>
                         <h1>usuario123</h1>
                     <br>

@@ -2,7 +2,9 @@
     display: block;
 }
 
-#img-produto, #config-display-excluir, #alterar-produto, #img-produto3, #config-display-alterar{
+#img-produto, #config-display-excluir, 
+#alterar-produto, #img-produto3, 
+#config-display-alterar, #elemento-file{
     display: none;
 }
 
