@@ -253,7 +253,7 @@ body{
 /* configurações padrões de formulários */
 
 .config-display-block-formulario{
-    margin-top: 10px;
+    margin-top: 25px;
     width: 100%;
 }
 
@@ -407,38 +407,6 @@ tr:hover{
     display: none;
 }
 
-/* configurações de responsividade */
-
-@media screen and (max-width: 1300px){
-    #config-display-mensagem{
-        display: block;
-    }
-    #config-container-display{
-        display: none;   
-    }
-    .config-display-header{
-        display: none;
-    }
-}
-
-@media screen and (max-height: 600px){
-    #config-display-mensagem{
-        display: block;
-    }
-    #config-container-display{
-        display: none;   
-    }
-    .config-display-header{
-        display: none;
-    }
-}
-
-@media print {
-    .config-positon-padrao{
-        display: none;
-    }
-}
-
 /* configurações padrões de exclusão */
 
 .config-display-excluir{
@@ -457,7 +425,6 @@ tr:hover{
 
 .config-inline-flex{
     width: 100%;
-    /* background: red; */
     display: flex;
     align-items: center;
     flex-flow: row nowrap;
@@ -559,4 +526,36 @@ tr:hover{
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+}
+
+/* configurações de responsividade */
+
+@media screen and (max-width: 1300px){
+    #config-display-mensagem{
+        display: block;
+    }
+    #config-container-display{
+        display: none;   
+    }
+    .config-display-header, .config-display-block-formulario{
+        display: none;
+    }
+}
+
+@media screen and (max-height: 600px){
+    #config-display-mensagem{
+        display: block;
+    }
+    #config-container-display{
+        display: none;   
+    }
+    .config-display-header, .config-display-block-formulario{
+        display: none;
+    }
+}
+
+@media print {
+    .config-positon-padrao{
+        display: none;
+    }
 }

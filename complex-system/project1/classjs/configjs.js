@@ -61,7 +61,7 @@ function eventoJanelaAlterar(){
 
 function eventoErro(){
     let cod = document.getElementById('cod-produto3').value
-    if(cod <= 0){
+    if(cod <= 0 || cod > 255){
         window.document.getElementById('cod-produto3').style.borderColor = 'red'
         window.document.getElementById('cod-produto3').style.color = 'red'
     }else{
@@ -72,7 +72,7 @@ function eventoErro(){
 
 function eventoErro2(){
     let cod = document.getElementById('cod-produto').value
-    if(cod <= 0){
+    if(cod <= 0 || cod > 255){
         window.document.getElementById('cod-produto').style.borderColor = 'red'
         window.document.getElementById('cod-produto').style.color = 'red'
     }else{
@@ -121,18 +121,44 @@ function eventoPreco3(){
 
 function eventoQuantidade(){
     let quantidade = window.document.getElementById('quantidade-produto').value
-    if(quantidade <= 0){
+    if(quantidade < 0 || quantidade > 255){
         window.document.getElementById('quantidade-produto').style.color = 'red'
         window.document.getElementById('quantidade-produto').style.borderColor = 'red'
     }else{
         window.document.getElementById('quantidade-produto').style.color = 'black'
         window.document.getElementById('quantidade-produto').style.borderColor = 'black'
     }
+
+    if(quantidade >= 180 && quantidade <= 255){
+        document.getElementById('obs-produto').value = "estoque cheio."
+        document.getElementById('obs-produto').style.borderColor = "black"
+        document.getElementById('obs-produto').style.color = "black"
+    }else if(quantidade >= 100 && quantidade < 180){
+        document.getElementById('obs-produto').value = "estoque médio."
+        document.getElementById('obs-produto').style.borderColor = "black"
+        document.getElementById('obs-produto').style.color = "black"
+    }else if(quantidade >= 1 && quantidade < 100){
+        document.getElementById('obs-produto').value = "estoque baixo."
+        document.getElementById('obs-produto').style.borderColor = "black"
+        document.getElementById('obs-produto').style.color = "black"
+    }else if(quantidade == 0){
+        document.getElementById('obs-produto').value = "estoque vazio."
+            document.getElementById('obs-produto').style.borderColor = "black"
+        document.getElementById('obs-produto').style.color = "black"
+    }else if(quantidade > 255){
+        document.getElementById('obs-produto').value = "estoque lotado!!!"
+        document.getElementById('obs-produto').style.borderColor = "red"
+        document.getElementById('obs-produto').style.color = "red"
+    }else{
+        document.getElementById('obs-produto').value = "estoque inválido."
+        document.getElementById('obs-produto').style.borderColor = "red"
+        document.getElementById('obs-produto').style.color = "red"
+    }
 }
 
 function eventoQuantidade2(){
     let quantidade3 = window.document.getElementById('quantidade-produto3').value
-    if(quantidade3 <= 0){
+    if(quantidade3 <= 0 || quantidade3 >= 255){
         window.document.getElementById('quantidade-produto3').style.color = 'red'
         window.document.getElementById('quantidade-produto3').style.borderColor = 'red'
     }else{
@@ -201,8 +227,8 @@ function eventoVerificar(){
     let iconProduto = document.getElementById('img-produto').value
     let observacao = document.getElementById('obs-produto').value
 
-    if(!(nomeProduto.length > 3 && quantidade > 0 && categoria.length > 3 && precoCusto > 0 && precoVenda > 0 
-    && precoVenda > precoCusto && /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/.test(validade) && iconProduto != "" && observacao != "")){
+    if(nomeProduto.length > 3 && quantidade > 0 && categoria.length > 3 && precoCusto > 0 && precoVenda > 0 
+    && precoVenda > precoCusto && /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/.test(validade) && iconProduto != "" && observacao != ""){
         document.querySelectorAll('.config-display-elementos1').forEach(function(elementos){
             elementos.style.display = 'none'
         })
@@ -243,4 +269,26 @@ function eventoAtualizarPerfil(){
     setTimeout(function(){
         window.document.getElementById('config-display-perfil').style.display = 'none'
     },500)
+}
+
+function eventoNome(){
+    let nomeUsuario = window.document.getElementById('nome-usuario').value
+    if(nomeUsuario.length < 4){
+        window.document.getElementById('nome-usuario').style.color = 'red'
+        window.document.getElementById('nome-usuario').style.borderColor = 'red'
+    }else{
+        window.document.getElementById('nome-usuario').style.color = 'black'
+        window.document.getElementById('nome-usuario').style.borderColor = 'black'
+    }
+}
+
+function eventoSenha(){
+    let senhaUsuario = window.document.getElementById('senha-usuario').value
+    if(senhaUsuario.length < 4){
+        window.document.getElementById('senha-usuario').style.color = 'red'
+        window.document.getElementById('senha-usuario').style.borderColor = 'red'
+    }else{
+        window.document.getElementById('senha-usuario').style.color = 'black'
+        window.document.getElementById('senha-usuario').style.borderColor = 'black'
+    }
 }
