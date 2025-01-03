@@ -1,0 +1,13 @@
+main{
+    margin-top: 30px;
+    margin: auto;
+    width: 90%;
+    margin-top: 40px;
+}
+
+.estilo-padrao-lista{
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
