@@ -1,8 +1,11 @@
 main{
-    margin-top: 30px;
     margin: auto;
+    margin-top: 140px;
     width: 90%;
-    margin-top: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 50px;
 }
 
 .estilo-padrao-lista{
@@ -33,4 +36,8 @@ main{
 
 .estilo-valor-lista{
     font: normal normal 20px arial;
+}
+
+#config-header-especifico{
+    position: fixed;
 }
