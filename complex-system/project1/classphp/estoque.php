@@ -102,7 +102,7 @@
                         <div class="estilo-botao-padrao3 config-display-elementos2" onclick="eventoCancelar()">cancelar</div>
                         <div class="estilo-botao-padrao3 config-display-elementos2" onclick="eventoVisualizar()">visualizar</div>
                     </div>
-                    <?php
+                    <!-- <?php
                         if(isset($_POST['cadastrar-produto'])){
                             $nome = $_POST['nome-produto'];
                             $quantidade = $_POST['quantidade-produto'];
@@ -138,7 +138,7 @@
                                 ";
                             }
                         }
-                    ?>
+                    ?> -->
                 </form>
             </div>
 
@@ -167,7 +167,7 @@
                                 <th>observação</th>
                                 <th>img</th>
                             </tr>
-                            <?php
+                            <!-- <?php
                                 $con = new mysqli('127.0.0.1:3306','root','','projeto_estoque');
                                 $consulta = "SELECT * FROM produtos";
                                 $execucao = $con -> query($consulta);
@@ -189,10 +189,10 @@
                                             ";
                                         }
                                     }
-                                ?>
+                                ?> -->
                         </table>
                     </div>
-                    <?php
+                    <!-- <?php
                         if(isset($_POST['excluir'])){
 
                             error_reporting(E_PARSE);
@@ -230,14 +230,14 @@
                                 }
                             }
                         }
-                    ?>
+                    ?> -->
                 </form>
             </div>
 
             <div id="config-display-alterar">
                 <form class="config-especifico4 config-especifico5" method="post" enctype="multipart/form-data">
                     <div class="config-display-excluir">
-                        <?php
+                        <!-- <?php
                         $cod_produto = "";
                         if(isset($_POST['procurar'])){
                             error_reporting(E_PARSE);
@@ -250,7 +250,7 @@
 
                             $cod_produto = $resultado_cod['cod'];
                         }
-                        ?>
+                        ?> -->
                         <label for="cod-produto3" class="estilo-padrao-inputs">
                             <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
                             <input type="number" name="cod-produto3" id="cod-produto3" class="estilo-input-padrao estilo-input-padrao2 estilo-input-padrao3 config-readonly-padrao" placeholder="código do produto..." required oninput="eventoErro()" value="<?=$cod_produto?>">
@@ -274,7 +274,7 @@
                                 <th>observação</th>
                                 <th>img</th>
                             </tr>
-                            <?php
+                            <!-- <?php
                                 $con = new mysqli('127.0.0.1:3306','root','','projeto_estoque');
                                 $consulta = "SELECT * FROM produtos";
                                 $execucao = $con -> query($consulta);
@@ -296,11 +296,11 @@
                                             ";
                                         }
                                     }
-                                ?>
+                                ?> -->
                         </table>
                     </div>
                     
-                    <?php
+                    <!-- <?php
                     
                     // $cod_produto = "";
                     $nome_produto = "";
@@ -370,7 +370,7 @@
                             $icon_img = $resultado_dados['icon_img'];
                         }
                     }
-                ?>
+                ?> -->
 
                     <div class="config-inline-flex">
                         <label for="nome-produto3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs3">
@@ -424,7 +424,7 @@
                         </div>
                     </div>
 
-                    <?php
+                    <!-- <?php
                         if(isset($_POST['alterar-produto'])){
 
                             $cod = $_POST['cod-produto3'];
@@ -515,7 +515,7 @@
                                 ";   
                             }
                         }
-                    ?>
+                    ?> -->
                 </form>
             </div>
         </div>
@@ -536,7 +536,7 @@
                     <th style="width:120px;">observação</th>
                     <th style="width:50px;">img</th>
                 </tr>
-                <?php
+                <!-- <?php
                     $con = new mysqli('127.0.0.1:3306','root','','projeto_estoque');
                     $consulta = "SELECT * FROM produtos";
                     $execucao = $con -> query($consulta);
@@ -558,7 +558,7 @@
                             ";
                         }
                     }
-                ?>
+                ?> -->
                 <tr>
                     <th></th>
                     <th></th>
@@ -609,14 +609,41 @@
                 <button class="estilo-botao-padrao" onclick="eventoAtualizarPerfil()">X</button>
                 <span>Configurações</span>
             </div>
-            <form>
+            <form method="post" enctype="multipart/form-data">
+                <?php
+                    $con = new mysqli('127.0.0.1:3306','root','','projeto_estoque');
+                    $consulta_usuario = "SELECT * FROM usuario ORDER BY id DESC LIMIT 1";
+                    $execucao = $con -> query($consulta_usuario);
+                    $resultado = $execucao -> fetch_assoc();
+                ?>
+
                 <div class="elementos2">
-                    <input type="file" name="elemento-file" id="elemento-file">
-                    <img src="../resources/icon-user.png" alt="icon-user" onclick="document.getElementById('elemento-file').click()">
+                    <input type="file" name="elemento-file3" id="elemento-file3">
+                    <img src="../resources/<?=$resultado['icon_usuario']?>" name="elemento-file3" id="elemento-file3" alt="icon-user" onclick="document.getElementById('elemento-file3').click()">
                     <br>
-                        <h1>usuario123</h1>
+                        <h1><?=$resultado['nome_usuario']?></h1>
                     <br>
-                    <button class="estilo-botao-padrao estilo-botao-padrao7">mudar icone</button>
+                    <button type="submit" name="enviar-icone-usuario" class="estilo-botao-padrao estilo-botao-padrao7">mudar icone</button>
+                    <?php
+                        if(isset($_POST['enviar-icone-usuario'])){
+
+                            error_reporting(E_PARSE);
+
+                            if(!empty($_FILES['elemento-file3']['name'])){
+                                $con = new mysqli('127.0.0.1:3306','root','','projeto_estoque');
+                                $arquivo_user = $_FILES['elemento-file3']['name'];
+                                $atualizar_icone = "UPDATE usuario SET icon_usuario = '$arquivo_user' WHERE id = 1";
+                                $local_arquivo = "../resources/" . $_FILES['elemento-file3']['name'];
+                                if($con -> query($atualizar_icone)){
+                                    if(move_uploaded_file($_FILES['elemento-file3']['tmp_name'], $local_arquivo)){
+                                        header("Location: ../classphp/estoque.php");
+                                    }
+                                }
+                            }else{
+                                
+                            }
+                        }
+                    ?>
                 </div>
             </form>
             <form class="config-form2">
