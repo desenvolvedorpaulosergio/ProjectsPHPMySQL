@@ -10,10 +10,11 @@ main{
 
 .estilo-padrao-lista{
     border-radius: 20px;
-    padding: 15px 10px;
+    padding: 15px 5px;
     transition: 300ms;
+    text-align: center;
     height: auto;
-    width: 200px;
+    width: 250px;
     display: flex;
     flex-flow: column nowrap;
     border: 1px solid black;
@@ -31,13 +32,9 @@ main{
 }
 
 .estilo-titulo-lista{
-    font: normal bold 30px 'fonte-titulo';
+    font: normal bold 28px 'fonte-titulo';
 }
 
 .estilo-valor-lista{
     font: normal normal 20px arial;
-}
-
-#config-header-especifico{
-    position: fixed;
 }

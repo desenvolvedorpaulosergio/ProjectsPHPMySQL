@@ -13,7 +13,7 @@
     <header class="config-display-header">
         <nav class="config-nav">
             <h1 class="estilo-titulo-padrao2">Estoques</h1>
-            <a href="#">produtos</a>
+            <a href="../classphp/produtos.php">produtos</a>
             <a href="#"><ins>estoques</ins></a>
             <a href="#">clientes</a>
             <a href="#">relatórios</a>
@@ -102,7 +102,7 @@
                         <div class="estilo-botao-padrao3 config-display-elementos2" onclick="eventoCancelar()">cancelar</div>
                         <div class="estilo-botao-padrao3 config-display-elementos2" onclick="eventoVisualizar()">visualizar</div>
                     </div>
-                    <!-- <?php
+                    <?php
                         if(isset($_POST['cadastrar-produto'])){
                             $nome = $_POST['nome-produto'];
                             $quantidade = $_POST['quantidade-produto'];
@@ -138,7 +138,7 @@
                                 ";
                             }
                         }
-                    ?> -->
+                    ?>
                 </form>
             </div>
 
@@ -167,7 +167,7 @@
                                 <th>observação</th>
                                 <th>img</th>
                             </tr>
-                            <!-- <?php
+                            <?php
                                 $con = new mysqli('127.0.0.1:3306','root','','projeto_estoque');
                                 $consulta = "SELECT * FROM produtos";
                                 $execucao = $con -> query($consulta);
@@ -189,10 +189,10 @@
                                             ";
                                         }
                                     }
-                                ?> -->
+                                ?>
                         </table>
                     </div>
-                    <!-- <?php
+                    <?php
                         if(isset($_POST['excluir'])){
 
                             error_reporting(E_PARSE);
@@ -206,7 +206,7 @@
                             $execucao_cod = $con -> query($consulta_cod);
                             $resultado_cod = $execucao_cod -> fetch_assoc();
 
-                            if($cod_produto != $resultado_cod['codigo_existente']){
+                            if(!($cod_produto != $resultado_cod['codigo_existente'])){
                                 print "
                                     <script>
                                         window.document.addEventListener('DOMContentLoaded', function(){
@@ -230,14 +230,14 @@
                                 }
                             }
                         }
-                    ?> -->
+                    ?>
                 </form>
             </div>
 
             <div id="config-display-alterar">
                 <form class="config-especifico4 config-especifico5" method="post" enctype="multipart/form-data">
                     <div class="config-display-excluir">
-                        <!-- <?php
+                        <?php
                         $cod_produto = "";
                         if(isset($_POST['procurar'])){
                             error_reporting(E_PARSE);
@@ -250,7 +250,7 @@
 
                             $cod_produto = $resultado_cod['cod'];
                         }
-                        ?> -->
+                        ?>
                         <label for="cod-produto3" class="estilo-padrao-inputs">
                             <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
                             <input type="number" name="cod-produto3" id="cod-produto3" class="estilo-input-padrao estilo-input-padrao2 estilo-input-padrao3 config-readonly-padrao" placeholder="código do produto..." required oninput="eventoErro()" value="<?=$cod_produto?>">
@@ -274,7 +274,7 @@
                                 <th>observação</th>
                                 <th>img</th>
                             </tr>
-                            <!-- <?php
+                            <?php
                                 $con = new mysqli('127.0.0.1:3306','root','','projeto_estoque');
                                 $consulta = "SELECT * FROM produtos";
                                 $execucao = $con -> query($consulta);
@@ -296,13 +296,12 @@
                                             ";
                                         }
                                     }
-                                ?> -->
+                                ?>
                         </table>
                     </div>
                     
-                    <!-- <?php
+                    <?php
                     
-                    // $cod_produto = "";
                     $nome_produto = "";
                     $quantidade_produto = "";
                     $categoria_produto = "";
@@ -370,7 +369,7 @@
                             $icon_img = $resultado_dados['icon_img'];
                         }
                     }
-                ?> -->
+                ?>
 
                     <div class="config-inline-flex">
                         <label for="nome-produto3" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs3">
@@ -424,7 +423,7 @@
                         </div>
                     </div>
 
-                    <!-- <?php
+                    <?php
                         if(isset($_POST['alterar-produto'])){
 
                             $cod = $_POST['cod-produto3'];
@@ -443,6 +442,7 @@
                             // $arquivo = $_POST['img-produto3'];
 
                             if($nome != "" && $quantidade > 0 && $quantidade <= 255 && $categoria != "" && $custo < $venda && $custo > 0 && $venda > 0 && $validade != "" && $taxa > 0 && $taxa <= 65 && $icon != "" && $obs != ""){
+                                error_reporting(E_PARSE);
                                 if($icon != ""){
                                     $con = new mysqli('127.0.0.1:3306','root','','projeto_estoque');                
                                     $alterar = "UPDATE produtos SET nome = '".$nome."', quantidade = $quantidade, categoria = '".$categoria."', preco_custo = $custo, preco_venda = $venda, validade = '$validade', impostos = $taxa, observacao = '$obs', icon_img = '".$icon."' WHERE cod = $cod";
@@ -515,7 +515,7 @@
                                 ";   
                             }
                         }
-                    ?> -->
+                    ?>
                 </form>
             </div>
         </div>
@@ -536,7 +536,7 @@
                     <th style="width:120px;">observação</th>
                     <th style="width:50px;">img</th>
                 </tr>
-                <!-- <?php
+                <?php
                     $con = new mysqli('127.0.0.1:3306','root','','projeto_estoque');
                     $consulta = "SELECT * FROM produtos";
                     $execucao = $con -> query($consulta);
@@ -558,7 +558,7 @@
                             ";
                         }
                     }
-                ?> -->
+                ?>
                 <tr>
                     <th></th>
                     <th></th>
