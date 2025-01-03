@@ -158,7 +158,7 @@ function eventoQuantidade(){
 
 function eventoQuantidade2(){
     let quantidade3 = window.document.getElementById('quantidade-produto3').value
-    if(quantidade3 <= 0 || quantidade3 >= 255){
+    if(quantidade3 < 0 || quantidade3 > 255){
         window.document.getElementById('quantidade-produto3').style.color = 'red'
         window.document.getElementById('quantidade-produto3').style.borderColor = 'red'
     }else{
@@ -225,10 +225,11 @@ function eventoVerificar(){
     let precoVenda = document.getElementById('preco-venda').value
     let validade = document.getElementById('validade-produto').value
     let iconProduto = document.getElementById('img-produto').value
+    let taxa = document.getElementById('taxa').value
     let observacao = document.getElementById('obs-produto').value
 
     if(nomeProduto.length > 3 && quantidade > 0 && categoria.length > 3 && precoCusto > 0 && precoVenda > 0 
-    && precoVenda > precoCusto && /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/.test(validade) && iconProduto != "" && observacao != ""){
+    && precoVenda > precoCusto && /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/.test(validade) && iconProduto != "" && observacao != "" && taxa > 0 <= 65){
         document.querySelectorAll('.config-display-elementos1').forEach(function(elementos){
             elementos.style.display = 'none'
         })
@@ -292,3 +293,37 @@ function eventoSenha(){
         window.document.getElementById('senha-usuario').style.borderColor = 'black'
     }
 }
+
+function eventoTaxa(){
+    let taxa = window.document.getElementById('taxa').value
+    if(taxa <= 0 || taxa > 65){
+        window.document.getElementById('taxa').style.color = 'red'
+        window.document.getElementById('taxa').style.borderColor = 'red'
+    }else{
+        window.document.getElementById('taxa').style.color = 'black'
+        window.document.getElementById('taxa').style.borderColor = 'black'
+    }
+}
+
+function eventoImposto(){
+    let taxa3 = window.document.getElementById('imposto3').value
+    if(taxa3 <= 0 || taxa3 > 65){
+        window.document.getElementById('imposto3').style.color = 'red'
+        window.document.getElementById('imposto3').style.borderColor = 'red'
+    }else{
+        window.document.getElementById('imposto3').style.color = 'black'
+        window.document.getElementById('imposto3').style.borderColor = 'black'
+    }
+}
+
+// window.document.addEventListener('DOMContentLoaded', function(){
+//     document.getElementById('config-display-mensagem-erro').style.display = 'block';
+
+//     window.document.getElementById('config-display-cadastro').style.display = "none"
+//     window.document.getElementById('config-display-excluir').style.display = "none"
+//     window.document.getElementById('config-display-alterar').style.display = "block"
+
+//     window.document.getElementById('estilo-underline-cadastrar').style.textDecoration = 'none'
+//     window.document.getElementById('estilo-underline-excluir').style.textDecoration = 'none'
+//     window.document.getElementById('estilo-underline-alterar').style.textDecoration = 'underline'
+// })
