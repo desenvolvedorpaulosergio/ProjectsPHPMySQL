@@ -6,8 +6,31 @@ main{
 }
 
 .estilo-padrao-lista{
-    width: 200px;
-    height: 300px;
     border-radius: 20px;
+    padding: 15px 10px;
+    transition: 300ms;
+    height: auto;
+    width: 200px;
+    display: flex;
+    flex-flow: column nowrap;
     border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.estilo-padrao-lista:hover{
+    transform: scale(1.02);
+}
+
+.estilo-icone-produto{
+    width: 150px;
+    border-bottom: 2px solid black;
+}
+
+.estilo-titulo-lista{
+    font: normal bold 30px 'fonte-titulo';
+}
+
+.estilo-valor-lista{
+    font: normal normal 20px arial;
 }
