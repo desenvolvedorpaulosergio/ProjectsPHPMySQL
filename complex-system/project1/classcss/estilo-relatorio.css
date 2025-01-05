@@ -61,3 +61,7 @@
 .config-borda{
     border-right: 1px solid black;
 }
+
+#elemento-file3{
+    display: none;
+}

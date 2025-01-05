@@ -19,7 +19,7 @@
             <a href="#" class="config-padrao-relatorios">
                 relatórios
                 <ul class="config-padrao-sub-nav" id="elementos">
-                    <li>produtos</li>
+                    <li onclick="window.location = '../classphp/relatorios.php'">produtos</li>
                     <li>clientes</li>
                 </ul>
             </a>

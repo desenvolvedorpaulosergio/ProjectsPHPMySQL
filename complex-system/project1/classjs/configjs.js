@@ -318,10 +318,20 @@ function eventoImposto(){
 
 function eventoRelatorioPodutos(){
     document.getElementById('config-display-relatorio').style.display = 'block'
-    document.getElementById('config-display-relatorio').style.textDecoration = 'block'
+    document.getElementById('config-display-previsao').style.display = 'none'
+
+    document.getElementById('config-relatorio-produtos').style.textDecoration = 'underline'
+    document.getElementById('config-relatorio-previsoes').style.textDecoration = 'none'
 }
 
 function eventoRelatorioPrevisoes(){
+    document.getElementById('config-display-previsao').style.display = 'block'
     document.getElementById('config-display-relatorio').style.display = 'none'
-    document.getElementById('config-display-relatorio').style.textDecoration = 'none'
+
+    document.getElementById('config-relatorio-produtos').style.textDecoration = 'none'
+    document.getElementById('config-relatorio-previsoes').style.textDecoration = 'underline'
 }
+
+window.document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById('config-relatorio-produtos').style.textDecoration = 'underline'
+})
