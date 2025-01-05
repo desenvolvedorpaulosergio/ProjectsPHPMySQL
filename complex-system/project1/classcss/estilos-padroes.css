@@ -558,3 +558,42 @@ tr:hover{
         display: none;
     }
 }
+
+/* configurações padrão de sub-opção */
+
+.config-padrao-relatorios{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.config-padrao-sub-nav{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    list-style-type: '';
+    position: absolute;
+    margin-top: 130px;
+    padding: 10px;
+    background: black;
+}
+
+.config-padrao-sub-nav > li{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font: normal normal 16px 'arial';
+    padding: 5px;
+}
+
+.config-padrao-sub-nav > li:hover{
+    text-decoration: underline;
+}
+
+.config-padrao-relatorios:hover > #elementos{
+    display: flex;
+}

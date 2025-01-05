@@ -206,7 +206,7 @@
                             $execucao_cod = $con -> query($consulta_cod);
                             $resultado_cod = $execucao_cod -> fetch_assoc();
 
-                            if(!($cod_produto != $resultado_cod['codigo_existente'])){
+                            if($cod_produto != $resultado_cod['codigo_existente']){
                                 print "
                                     <script>
                                         window.document.addEventListener('DOMContentLoaded', function(){
@@ -619,7 +619,7 @@
 
                 <div class="elementos2">
                     <input type="file" name="elemento-file3" id="elemento-file3">
-                    <img src="../resources/<?=$resultado['icon_usuario']?>" name="elemento-file3" id="elemento-file3" alt="icon-user" onclick="document.getElementById('elemento-file3').click()">
+                    <img src="../resources/<?=$resultado['icon_usuario']?>" name="elemento-file3" id="" alt="icon-user" onclick="document.getElementById('elemento-file3').click()">
                     <br>
                         <h1><?=$resultado['nome_usuario']?></h1>
                     <br>
@@ -636,17 +636,27 @@
                                 $local_arquivo = "../resources/" . $_FILES['elemento-file3']['name'];
                                 if($con -> query($atualizar_icone)){
                                     if(move_uploaded_file($_FILES['elemento-file3']['tmp_name'], $local_arquivo)){
-                                        header("Location: ../classphp/estoque.php");
+                                        print "
+                                            <script>
+                                                window.location = '../classphp/estoque.php';
+                                            </script>
+                                        ";
                                     }
                                 }
                             }else{
-                                
+                                print "
+                                    <script>
+                                        window.document.addEventListener('DOMContentLoaded', function(){
+                                            window.document.getElementById('config-display-mensagem-erro').style.display = 'block'
+                                        })
+                                    </script>
+                                ";
                             }
                         }
                     ?>
                 </div>
             </form>
-            <form class="config-form2">
+            <form class="config-form2" method="post">
                 <br>
                 <label for="nome-usuario" class="estilo-padrao-inputs estilo-padrao-inputs2 estilo-padrao-inputs3">
                     <span class="material-symbols-outlined estilo-icon3">person</span>
@@ -657,6 +667,24 @@
                     <input type="text" name="senha-usuario" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="senha-usuario" placeholder="nova senha" required oninput="eventoSenha()">
                 </label>
                 <button type="submit" name="atualizar" class="estilo-botao-padrao estilo-botao-padrao7" id='config-atualizar'>atualizar</button>
+                <?php
+                    if(isset($_POST['atualizar'])){
+                        
+                        $nome_usuario = $_POST['nome-usuario'];
+                        $senha_usuario = $_POST['senha-usuario'];
+
+                        $con = new mysqli('127.0.0.1:3306','root','','projeto_estoque');
+                        $atualizar = "UPDATE usuario SET nome_usuario = '$nome_usuario', senha_usuario = '$senha_usuario' WHERE id = 1";
+
+                        if($con -> query($atualizar)){
+                            print "
+                                <script>
+                                    window.location = '../classphp/estoque.php';
+                                </script>
+                            ";
+                        }
+                    }
+                ?>
             </form>
         </div>
     </div>

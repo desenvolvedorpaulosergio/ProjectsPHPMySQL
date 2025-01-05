@@ -85,18 +85,18 @@ function eventoPreco(){
     let precoCusto = document.getElementById('preco-custo').value
     let pecoVenda = document.getElementById('preco-venda').value
     
-    if(precoCusto >= pecoVenda || precoCusto <= 0 || pecoVenda <= 0){
+    if(precoCusto < pecoVenda && precoCusto > 0 && pecoVenda > 0){
+        window.document.getElementById('preco-custo').style.borderColor = 'black'
+        window.document.getElementById('preco-custo').style.color = 'black'
+        
+        window.document.getElementById('preco-venda').style.borderColor = 'black'
+        window.document.getElementById('preco-venda').style.color = 'black'
+    }else{
         window.document.getElementById('preco-custo').style.borderColor = 'red'
         window.document.getElementById('preco-custo').style.color = 'red'
 
         window.document.getElementById('preco-venda').style.borderColor = 'red'
         window.document.getElementById('preco-venda').style.color = 'red'
-    }else{
-        window.document.getElementById('preco-custo').style.borderColor = 'black'
-        window.document.getElementById('preco-custo').style.color = 'black'
-
-        window.document.getElementById('preco-venda').style.borderColor = 'black'
-        window.document.getElementById('preco-venda').style.color = 'black'
     }
 }
 
@@ -315,15 +315,3 @@ function eventoImposto(){
         window.document.getElementById('imposto3').style.borderColor = 'black'
     }
 }
-
-// window.document.addEventListener('DOMContentLoaded', function(){
-//     document.getElementById('config-display-mensagem-erro').style.display = 'block';
-
-//     window.document.getElementById('config-display-cadastro').style.display = "none"
-//     window.document.getElementById('config-display-excluir').style.display = "none"
-//     window.document.getElementById('config-display-alterar').style.display = "block"
-
-//     window.document.getElementById('estilo-underline-cadastrar').style.textDecoration = 'none'
-//     window.document.getElementById('estilo-underline-excluir').style.textDecoration = 'none'
-//     window.document.getElementById('estilo-underline-alterar').style.textDecoration = 'underline'
-// })
