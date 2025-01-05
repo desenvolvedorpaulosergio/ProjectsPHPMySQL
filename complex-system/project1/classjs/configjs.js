@@ -315,3 +315,13 @@ function eventoImposto(){
         window.document.getElementById('imposto3').style.borderColor = 'black'
     }
 }
+
+function eventoRelatorioPodutos(){
+    document.getElementById('config-display-relatorio').style.display = 'block'
+    document.getElementById('config-display-relatorio').style.textDecoration = 'block'
+}
+
+function eventoRelatorioPrevisoes(){
+    document.getElementById('config-display-relatorio').style.display = 'none'
+    document.getElementById('config-display-relatorio').style.textDecoration = 'none'
+}

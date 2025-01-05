@@ -1,0 +1,63 @@
+.config-especifico5{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.config-padrao-relatorios-div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.config-padrao-relatorios-div > div > h1{
+    font: normal bold 32px 'fonte-titulo';
+}
+
+.config-padrao-relatorios-div > div{
+    padding: 20px;
+    width: 80%;
+}
+
+.estilo-padrao-inputs3{
+    width: 93%;
+}
+
+#config-select{
+    margin-right: 10px;
+}
+
+.config-texto, .config-texto2{
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 93%;
+}
+
+.config-texto2{
+    margin: 40px 0px;
+}
+
+.config-especifico-span1, .config-especifico-span3{
+    font: normal normal 20px 'arial';
+}
+
+.config-especifico-span2, .config-especifico-span4{
+    font: normal normal 20px 'arial';
+    color: #666666;
+}
+
+#config-display-previsao{
+    display: none;
+}
+
+.config-borda{
+    border-right: 1px solid black;
+}

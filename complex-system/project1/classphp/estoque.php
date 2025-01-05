@@ -16,7 +16,13 @@
             <a href="../classphp/produtos.php">produtos</a>
             <a href="#"><ins>estoques</ins></a>
             <a href="#">clientes</a>
-            <a href="#">relatórios</a>
+            <a href="#" class="config-padrao-relatorios">
+                relatórios
+                <ul class="config-padrao-sub-nav" id="elementos">
+                    <li>produtos</li>
+                    <li>clientes</li>
+                </ul>
+            </a>
             <a href="#">
                 <span class="material-symbols-outlined estilo-icon2" onclick="eventoClick()">settings</span>
             </a>
