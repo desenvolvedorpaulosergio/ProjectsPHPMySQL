@@ -539,6 +539,9 @@ tr:hover{
     .config-display-header, .config-display-block-formulario{
         display: none;
     }
+    main{
+        display: none;
+    }
 }
 
 @media screen and (max-height: 600px){
@@ -549,6 +552,9 @@ tr:hover{
         display: none;   
     }
     .config-display-header, .config-display-block-formulario{
+        display: none;
+    }
+    main{
         display: none;
     }
 }

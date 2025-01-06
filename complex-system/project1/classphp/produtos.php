@@ -47,7 +47,16 @@
                 }
             }
         ?>
-    </main>
-
+    </main>  
+    
+    <div id="config-display-mensagem">
+        <div class="config-mensagem-erro">
+            <div class="mensagem-erro">
+                <p class="mensagem config-especifico-mensagem">
+                    é necessário estar na tela cheia para usar o sistema!!!
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

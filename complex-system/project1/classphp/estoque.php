@@ -47,7 +47,7 @@
                             <div class="config-display-form-inline">
                                 <label for="quantidade-produto" class="estilo-padrao-inputs estilo-padrao-inputs2">
                                     <span class="material-symbols-outlined estilo-icon3">shopping_bag</span>
-                                    <input type="number" name="quantidade-produto" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="quantidade-produto" placeholder="quantidade" required step="1" oninput="eventoQuantidade()">
+                                    <input type="number" name="quantidade-produto" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="quantidade-produto" placeholder="quantidade" required step="1" oninput="eventoQuantidade()" value="255">
                                 </label>
 
                                 <label for="categoria-produto" class="estilo-padrao-inputs estilo-padrao-inputs2">
@@ -96,7 +96,7 @@
                             </label>
                             <label for="obs-produto" class="estilo-padrao-inputs estilo-padrao-inputs2">
                                 <span class="material-symbols-outlined estilo-icon3">warning</span>
-                                <input type="text" name="obs-produto" id="obs-produto" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="obs-produto" placeholder="observação" required readonly value="">
+                                <input type="text" name="obs-produto" id="obs-produto" class="estilo-input-padrao estilo-input-padrao2 config-readonly-padrao" id="obs-produto" placeholder="observação" required readonly value="estoque cheio.">
                             </label>
                         </div>
                     </div>
@@ -624,7 +624,7 @@
                 ?>
 
                 <div class="elementos2">
-                    <input type="file" name="elemento-file3" id="elemento-file3">
+                    <input type="file" name="elemento-file3" id="elemento-file3" style="display:none;">
                     <img src="../resources/<?=$resultado['icon_usuario']?>" name="elemento-file3" id="" alt="icon-user" onclick="document.getElementById('elemento-file3').click()">
                     <br>
                         <h1><?=$resultado['nome_usuario']?></h1>
